@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using Repository.Interfaces;
+using Repository.Models;
 
 namespace DailyPlanner.API.Controllers
 {

@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+/* enabling marked timespans for month view */
+.dhx_scheduler_month .dhx_marked_timespan {
+  display: block;
+}
+/* style to display special dates, e.g. holidays */
+.holiday {
+  background-color: #fadcd3;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+  color: #e2b8ac;
+
+}
+
+.good_day .dhx_month_body{
+  background-color: #ececec;
+}
+.good_day .dhx_month_head{
+  background-color: #dddfd9;
+}

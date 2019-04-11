@@ -10,8 +10,8 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(PlannerDBContext))]
-    [Migration("20190405080624_DailyPlannerInit")]
-    partial class DailyPlannerInit
+    [Migration("20190409082726_DPInit")]
+    partial class DPInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,12 +40,16 @@ namespace Repository.Migrations
 
                     b.Property<int>("Type");
 
+                    b.Property<Guid?>("UserId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Repository.User", b =>
+            modelBuilder.Entity("Repository.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -71,6 +75,13 @@ namespace Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Repository.Event", b =>
+                {
+                    b.HasOne("Repository.Models.User", "User")
+                        .WithMany("Events")
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

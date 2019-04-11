@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using Repository.Interfaces;
+using Repository.Models;
 
 namespace Repository
 {
@@ -20,9 +21,9 @@ namespace Repository
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        
         public DateTime CreationDate { get; set; }
         public bool IsActive { get; set; }
         public EventEnum Type { get; set; }
+        public User User { get; set; }
     }
 }

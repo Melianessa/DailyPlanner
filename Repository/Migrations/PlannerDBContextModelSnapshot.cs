@@ -38,12 +38,16 @@ namespace Repository.Migrations
 
                     b.Property<int>("Type");
 
+                    b.Property<Guid?>("UserId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Repository.User", b =>
+            modelBuilder.Entity("Repository.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -69,6 +73,13 @@ namespace Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Repository.Event", b =>
+                {
+                    b.HasOne("Repository.Models.User", "User")
+                        .WithMany("Events")
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

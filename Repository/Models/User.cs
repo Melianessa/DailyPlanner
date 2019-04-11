@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Repository.Interfaces;
 
-namespace Repository
+namespace Repository.Models
 {
     public class User:IBase
     {
@@ -23,5 +24,6 @@ namespace Repository
         public bool Sex { get; set; }
         public bool IsActive { get; set; }
         public RoleEnum Role { get; set; }
+        public ICollection<Event> Events { get; set; }
     }
 }

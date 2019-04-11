@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Repository.Interfaces;
 
 namespace Repository.Models.DataManager
@@ -15,12 +16,12 @@ namespace Repository.Models.DataManager
         }
         public IEnumerable<User> GetAll()
         {
-            return _context.Users.ToList();
+            return _context.Users.Include(e=>e.Events).ToList();
         }
 
         public User Get(Guid id)
         {
-            var user = _context.Users.FirstOrDefault(u => u.Id == id);
+            var user = _context.Users.Include(e=>e.Events).FirstOrDefault(u => u.Id == id);
             return user;
         }
 
