@@ -1,0 +1,19 @@
+﻿.btn-success, .btn-warning, .btn-danger {
+    width: 150px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.button-group .btn + .btn {
+    margin-left: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+.event-date-header{
+    top:6px;
+    left:11px;
+    color:#979797;
+}

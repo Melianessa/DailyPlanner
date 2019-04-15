@@ -34,7 +34,7 @@ namespace DailyPlanner.Web.Controllers
                 if (res.IsSuccessStatusCode)
                 {
                     var result = res.Content.ReadAsStringAsync().Result;
-                    ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.CreationDate).ToList();
+                    ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.StartDate).ToList();
                 }
             }
             catch (Exception e)
@@ -182,7 +182,7 @@ namespace DailyPlanner.Web.Controllers
 
                 Event ev = new Event();
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/event/{id}");
+                HttpResponseMessage res = await client.DeleteAsync($"api/event/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
