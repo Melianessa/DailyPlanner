@@ -13,7 +13,7 @@ using Repository.Models;
 
 namespace DailyPlanner.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class EventController : Controller
     {
         APIHelper _userAPI = new APIHelper();
@@ -23,7 +23,35 @@ namespace DailyPlanner.Web.Controllers
         {
             _logger = logger;
         }
-        [HttpGet("[action]")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IEnumerable<Event>> PostByDate(string date)
+        {
+            List<Event> ev = new List<Event>();
+            try
+            {
+                HttpClient client = _userAPI.InitializeClient();
+                if (date == null)
+                {
+                    date = DateTime.UtcNow.ToString();
+                }
+                var content = new StringContent(JsonConvert.SerializeObject(new { Date= date } ), Encoding.UTF8, "application/json");
+                // or JsonConvert.SerializeObject(date)
+                HttpResponseMessage res = await client.PostAsync("api/event/", content);
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.StartDate).ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                _logger.LogWarning($"Error in PostByDate method: {e.Message}");
+            }
+
+            return ev;
+        }
+        [HttpGet]
         public async Task<IEnumerable<Event>> GetAll()
         {
             List<Event> ev = new List<Event>();
@@ -44,7 +72,7 @@ namespace DailyPlanner.Web.Controllers
 
             return ev;
         }
-        [HttpGet("[action]")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
             List<Event> evs = new List<Event>();
@@ -73,7 +101,7 @@ namespace DailyPlanner.Web.Controllers
 
             return Ok();
         }
-        [HttpPost("[action]")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
             [Bind("Id,Title,Description,CreationDate,StartDate,EndDate,Type,UserId,IsActive")]

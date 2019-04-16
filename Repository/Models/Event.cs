@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 using Repository.Interfaces;
 using Repository.Models;
 
@@ -17,6 +16,8 @@ namespace Repository
         }
         [Key]
         public Guid Id { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [Required]
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime StartDate { get; set; }

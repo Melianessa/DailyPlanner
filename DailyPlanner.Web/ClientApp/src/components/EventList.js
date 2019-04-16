@@ -22,16 +22,22 @@ export class EventList extends Component {
         this.handleGetAll();
     }
     handleGetAll(day) {
-        fetch('api/event/getAll', {
-            method: 'GET'
+        fetch('api/event/postByDate', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(day)
         })
             .then(response => response.json())
             .then(data => {
                 console.log(data);
                 this.handleDayClick(day);
-                const newData = this.state.events.filter(item => item.startDate.toLocaleDateString() === this.state.selectedDay.toLocaleDateString());
+                //const newData = this.state.events.filter(item => item.startDate.toLocaleDateString() === this.state.selectedDay.toLocaleDateString());
                 this.setState({
-                    events: data, loading: false});
+                    events: data, loading: false
+                });
             });
     }
     

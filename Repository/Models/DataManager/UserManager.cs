@@ -16,12 +16,12 @@ namespace Repository.Models.DataManager
         }
         public IEnumerable<User> GetAll()
         {
-            return _context.Users.Include(e=>e.Events).ToList();
+            return _context.Users.Include(e => e.Events).ToList();
         }
 
         public User Get(Guid id)
         {
-            var user = _context.Users.Include(e=>e.Events).FirstOrDefault(u => u.Id == id);
+            var user = _context.Users.Include(e => e.Events).FirstOrDefault(u => u.Id == id);
             return user;
         }
 
@@ -34,7 +34,7 @@ namespace Repository.Models.DataManager
         public void Update(Guid id, User b)
         {
             var user = _context.Users.Find(id);
-            if (user!=null)
+            if (user != null)
             {
                 user.FirstName = b.FirstName;
                 user.LastName = b.LastName;

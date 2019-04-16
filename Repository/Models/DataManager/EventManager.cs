@@ -6,7 +6,7 @@ using Repository.Interfaces;
 
 namespace Repository.Models.DataManager
 {
-    public class EventManager : IDataRepository<Event>
+    public class EventManager : IDataRepository<Event>, IEventBase<Event>
     {
         private readonly PlannerDBContext _context;
 
@@ -18,7 +18,16 @@ namespace Repository.Models.DataManager
         {
             return _context.Events.ToList();
         }
-
+        public IEnumerable<Event> PostByDate(string date)
+        {
+            var d = DateTime.Parse(date);
+            if (date == null)
+            {
+                d = DateTime.UtcNow;
+            }
+            return _context.Events.Where(dat=>dat.StartDate.Date==d.Date).ToList();
+        }
+         
         public Event Get(Guid id)
         {
             var ev = _context.Events.FirstOrDefault(u => u.Id == id);

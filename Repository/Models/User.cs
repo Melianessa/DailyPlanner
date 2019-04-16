@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Repository.Interfaces;
 
 namespace Repository.Models
@@ -15,7 +16,11 @@ namespace Repository.Models
         }
         [Key]
         public Guid Id { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [Required]
         public string FirstName { get; set; }
+        [Column(TypeName = "varchar(40)")]
+        [Required]
         public string LastName { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime DateOfBirth { get; set; }

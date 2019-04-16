@@ -32,6 +32,7 @@ namespace DailyPlanner.API
         {
             services.AddScoped<IDataRepository<User>, UserManager>();
             services.AddScoped<IDataRepository<Event>, EventManager>();
+            services.AddScoped<IEventBase<Event>, EventManager>();
             services.AddScoped<DbContext, PlannerDBContext>();
             services.AddDbContext<PlannerDBContext>(opts =>
                 opts.UseSqlServer(Configuration["ConnectionString:DailyPlannerDB"]));
