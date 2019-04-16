@@ -16727,3 +16727,157 @@ Request finished in 15.3735ms 200 image/x-icon
 Request finished in 1132.2582ms 101 
 Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/951/z5jnoblx/eventsource  
 Request finished in 25011.0429ms 200 application/javascript; charset=UTF-8
+Starting create-react-app server on port 62252...
+Request starting HTTP/1.1 GET http://localhost:44313/  
+> DailyPlanner.Web@0.1.0 start D:\Projects\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 17472.5665ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 1047.5582ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/info?t=1555396936052  
+Request finished in 12.779ms 304 
+Request finished in 18.3159ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/646/iznjcdan/websocket  
+Request starting HTTP/1.1 GET http://localhost:44313/manifest.json  
+Request finished in 10.4405ms 304 
+Request starting HTTP/1.1 POST http://localhost:44313/sockjs-node/646/hfail1no/xhr_streaming?t=1555396936807  0
+Request finished in 1109.0347ms 101 
+  Line 32:  'newData' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request starting HTTP/1.1 GET http://localhost:44313/473b80c6ba4669abb800.hot-update.json  
+Request finished in 1018.561ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/0.473b80c6ba4669abb800.hot-update.js  
+Request finished in 9.0513ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/  
+Request finished in 7.3148ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 528.5531ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 13.2563ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/info?t=1555397173999  
+Request finished in 8.0235ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/823/2lspyy33/websocket  
+Request starting HTTP/1.1 GET http://localhost:44313/manifest.json  
+Request finished in 7.7252ms 304 
+Request starting HTTP/1.1 POST http://localhost:44313/sockjs-node/823/vjgwygw5/xhr_streaming?t=1555397174764  0
+Request finished in 1019.9021ms 101 
+  Line 32:  'newData' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Request finished in 247725.598ms 200 application/javascript; charset=UTF-8
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request starting HTTP/1.1 GET http://localhost:44313/30e40a79c39958504942.hot-update.json  
+Request finished in 1015.9238ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/0.30e40a79c39958504942.hot-update.js  
+Request finished in 14.3769ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/  
+Request finished in 8.3527ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 569.0062ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 7.3892ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/info?t=1555397187996  
+Request finished in 5.7923ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/409/q2vkipou/websocket  
+Request starting HTTP/1.1 GET http://localhost:44313/manifest.json  
+Request finished in 8.7644ms 304 
+Request starting HTTP/1.1 POST http://localhost:44313/sockjs-node/409/5r43uyd1/xhr_streaming?t=1555397188746  0
+Request finished in 1018.7493ms 101 
+Request finished in 25006.7167ms 200 application/javascript; charset=UTF-8
+  Line 32:  'newData' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request starting HTTP/1.1 GET http://localhost:44313/e460f7f71b267b218707.hot-update.json  
+Request finished in 1012.7552ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/0.e460f7f71b267b218707.hot-update.js  
+Request finished in 11.514ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/  
+Request finished in 16.5091ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 701.1827ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 10.6329ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/info?t=1555397213739  
+Request finished in 20.7953ms 200 application/json; charset=UTF-8
+Request finished in 25027.1339ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/866/ljnmkma5/websocket  
+Request finished in 9.5634ms 304 
+Request starting HTTP/1.1 POST http://localhost:44313/sockjs-node/866/0xqccwcp/xhr_streaming?t=1555397214573  0
+Request finished in 1025.3794ms 101 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 1018.0779ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 19.371ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js.map  
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js.map  
+Request finished in 185.4511ms 200 application/json; charset=UTF-8
+Request finished in 1021.8892ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/  
+Request finished in 1015.7134ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 12.2899ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 29.1043ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/info?t=1555397226132  
+Request finished in 9.6708ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/687/pta0wpjl/websocket  
+Request finished in 7.5787ms 304 
+Request starting HTTP/1.1 POST http://localhost:44313/sockjs-node/687/znxi41am/xhr_streaming?t=1555397226925  0
+Request finished in 1124.6664ms 101 
+Request starting HTTP/1.1 GET http://localhost:44313/api/SampleData/WeatherForecasts  
+Route matched with {action = "WeatherForecasts", controller = "SampleData", page = ""}. Executing action DailyPlanner.Web.Controllers.SampleDataController.WeatherForecasts (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.SampleDataController.WeatherForecasts (DailyPlanner.Web) - Validation state: Valid
+Error in WeatherForecasts method: Index was outside the bounds of the array.
+Executed action method DailyPlanner.Web.Controllers.SampleDataController.WeatherForecasts (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.541ms.
+Executing ObjectResult, writing value of type 'System.Linq.Enumerable+SelectIPartitionIterator`2[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[DailyPlanner.Web.Controllers.SampleDataController+WeatherForecast, DailyPlanner.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.SampleDataController.WeatherForecasts (DailyPlanner.Web) in 157.0392ms
+Request finished in 229.839ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44313/api/event/getAll  
+Route matched with {action = "GetAll", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetAll (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetAll (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetAll (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 790.4898ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetAll (DailyPlanner.Web) in 820.2903ms
+Request finished in 858.539ms 200 application/json; charset=utf-8
+Request finished in 25015.368ms 200 application/javascript; charset=UTF-8

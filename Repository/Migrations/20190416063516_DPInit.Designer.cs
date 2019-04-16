@@ -10,7 +10,7 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(PlannerDBContext))]
-    [Migration("20190415143046_DPInit")]
+    [Migration("20190416063516_DPInit")]
     partial class DPInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,15 +26,15 @@ namespace Repository.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<long>("CreationDate");
+                    b.Property<DateTime>("CreationDate");
 
                     b.Property<string>("Description");
 
-                    b.Property<long>("EndDate");
+                    b.Property<DateTime>("EndDate");
 
                     b.Property<bool>("IsActive");
 
-                    b.Property<long>("StartDate");
+                    b.Property<DateTime>("StartDate");
 
                     b.Property<string>("Title");
 
@@ -54,9 +54,9 @@ namespace Repository.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<long>("CreationDate");
+                    b.Property<DateTime>("CreationDate");
 
-                    b.Property<long>("DateOfBirth");
+                    b.Property<DateTime>("DateOfBirth");
 
                     b.Property<string>("Email");
 

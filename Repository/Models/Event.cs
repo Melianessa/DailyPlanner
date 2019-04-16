@@ -12,16 +12,16 @@ namespace Repository
         public Event()
         {
             Id=Guid.NewGuid();
-            CreationDate = DateTime.Now.Ticks;
+            CreationDate = DateTime.UtcNow;
             IsActive = true;
         }
         [Key]
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
-        public long CreationDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public DateTime CreationDate { get; set; }
         public bool IsActive { get; set; }
         public EventEnum Type { get; set; }
         public User User { get; set; }
