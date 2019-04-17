@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using Repository.Interfaces;
 
 namespace DailyPlanner.API.Controllers
 {
-    [Route("api/[controller]")]
-    
+    [Route("api/[controller]/[action]")]
+
     public class EventController : ControllerBase
     {
         private readonly IDataRepository<Event> _iRepo;
@@ -23,9 +20,9 @@ namespace DailyPlanner.API.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<Event> PostByDate(string date)
+        public IEnumerable<Event> GetByDate([FromBody]string date)
         {
-            return _iEventRepo.PostByDate(date);
+            return _iEventRepo.GetByDate(date);
         }
 
         [HttpGet]

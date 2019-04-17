@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -24,8 +25,7 @@ namespace DailyPlanner.Web.Controllers
             _logger = logger;
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IEnumerable<Event>> PostByDate(string date)
+        public async Task<IEnumerable<Event>> GetByDate([FromBody]string date) //try [FromBody] or [Bind]
         {
             List<Event> ev = new List<Event>();
             try
@@ -33,20 +33,20 @@ namespace DailyPlanner.Web.Controllers
                 HttpClient client = _userAPI.InitializeClient();
                 if (date == null)
                 {
-                    date = DateTime.UtcNow.ToString();
+                    date = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
                 }
-                var content = new StringContent(JsonConvert.SerializeObject(new { Date= date } ), Encoding.UTF8, "application/json");
+                var content = new StringContent(JsonConvert.SerializeObject(date), Encoding.UTF8, "application/json");
                 // or JsonConvert.SerializeObject(date)
-                HttpResponseMessage res = await client.PostAsync("api/event/", content);
+                HttpResponseMessage res = await client.PostAsync("api/event/getByDate", content);
                 if (res.IsSuccessStatusCode)
                 {
-                    var result = res.Content.ReadAsStringAsync().Result;
+                    var result = await res.Content.ReadAsStringAsync();
                     ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.StartDate).ToList();
                 }
             }
             catch (Exception e)
             {
-                _logger.LogWarning($"Error in PostByDate method: {e.Message}");
+                _logger.LogWarning($"Error in GetByDate method: {e.Message}");
             }
 
             return ev;
@@ -202,19 +202,13 @@ namespace DailyPlanner.Web.Controllers
         {
             try
             {
-                if (id == null)
-                {
-                    _logger.LogInformation("In Delete method Id is NULL");
-                    return NotFound();
-                }
-
                 Event ev = new Event();
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.DeleteAsync($"api/event/{id}");
+                HttpResponseMessage res = await client.DeleteAsync($"api/event/delete/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
-                    var result = res.Content.ReadAsStringAsync().Result;
+                    var result = await res.Content.ReadAsStringAsync();
                     ev = JsonConvert.DeserializeObject<Event>(result);
                 }
                 if (ev == null)

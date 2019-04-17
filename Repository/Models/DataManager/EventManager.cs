@@ -18,14 +18,14 @@ namespace Repository.Models.DataManager
         {
             return _context.Events.ToList();
         }
-        public IEnumerable<Event> PostByDate(string date)
+        public IEnumerable<Event> GetByDate(string date)
         {
             var d = DateTime.Parse(date);
-            if (date == null)
-            {
-                d = DateTime.UtcNow;
-            }
-            return _context.Events.Where(dat=>dat.StartDate.Date==d.Date).ToList();
+            //if (date == null)
+            //{
+            //    d = DateTime.UtcNow;
+            //}
+            return _context.Events.Where(p=>p.StartDate.Date==d.Date).ToList();
         }
          
         public Event Get(Guid id)

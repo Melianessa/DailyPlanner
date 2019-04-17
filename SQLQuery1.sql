@@ -1,2 +1,2 @@
 ﻿insert into Users(Id,FirstName,LastName,DateOfBirth,CreationDate,IsActive,Role,Sex) values ('4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a', 'Ian', 'Some','2010-01-01 12:00','2019-04-16 12:00','true',1,'true')
-insert into Events(Id,Title,StartDate,EndDate,CreationDate,IsActive,Type,UserId) values ('4c19d4f8-9346-438d-8216-7fd0dd016c31', 'Call', '2019-04-16 12:00','2019-04-18 12:00','2019-04-16 12:00','true',1,(select Id from Users where LastName='Some'))
+insert into Events(Id,Title,StartDate,EndDate,CreationDate,IsActive,Type,UserId) values ('488b19ab-a015-4e4c-a3c4-c24e76b94aff', 'Call', '2019-04-17 12:00','2019-04-18 12:00','2019-04-16 12:00','true',1,(select Id from Users where LastName='Some'))
