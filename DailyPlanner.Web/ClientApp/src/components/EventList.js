@@ -21,14 +21,14 @@ export class EventList extends Component {
         this.handleGetAll();
     }
     handleGetAll(day) {
-        const stringDate = JSON.stringify(day);
+        let reqBody = { date: day };
 	    fetch('api/event/getByDate', {
             method: "POST",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ "date": stringDate })
+            body: JSON.stringify(reqBody)
         }).then(response => {
             const json = response.json();
 	        console.log(json);

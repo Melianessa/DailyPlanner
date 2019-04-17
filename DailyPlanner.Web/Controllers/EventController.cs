@@ -25,7 +25,7 @@ namespace DailyPlanner.Web.Controllers
             _logger = logger;
         }
         [HttpPost]
-        public async Task<IEnumerable<Event>> GetByDate([FromBody]string date) //try [FromBody] or [Bind]
+        public async Task<IEnumerable<Event>> GetByDate([Bind]string date) //try [FromBody] or [Bind]
         {
             List<Event> ev = new List<Event>();
             try

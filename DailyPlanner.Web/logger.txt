@@ -4400,3 +4400,91 @@ Compiled successfully!
 Request starting HTTP/1.1 POST http://localhost:50156/api/event/getbydate application/json 31
 Request finished in 16.0691ms 307 
 Connection id "0HLM35LTGLGCK", Request id "0HLM35LTGLGCK:00000001": the application completed without reading the entire request body.
+Starting create-react-app server on port 59203...
+Request starting HTTP/1.1 GET http://localhost:44313/  
+Request starting HTTP/1.1 DEBUG http://localhost:50156/  0
+Request finished in 103.2991ms 200 
+> DailyPlanner.Web@0.1.0 start D:\Projects\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 20409.1495ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 675.1242ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/info?t=1555506305936  
+Request finished in 27.6305ms 304 
+Request finished in 37.9738ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/808/5dszlcii/websocket  
+Request starting HTTP/1.1 GET http://localhost:44313/manifest.json  
+Request finished in 38.7456ms 304 
+Request starting HTTP/1.1 POST http://localhost:44313/sockjs-node/808/xqhtsmwb/xhr_streaming?t=1555506306811  0
+Request finished in 1169.6364ms 101 
+Request starting HTTP/1.1 POST http://localhost:44313/api/event/getByDate application/json 2
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7281.3371ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 7504.9832ms
+Request finished in 7618.6172ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:44313/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Starting create-react-app server on port 59318...
+Request starting HTTP/1.1 GET http://localhost:44313/  
+Request starting HTTP/1.1 DEBUG http://localhost:50156/  0
+Request finished in 220.5283ms 200 
+> DailyPlanner.Web@0.1.0 start D:\Projects\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 20383.9186ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js  
+Request finished in 222.7804ms 304 
+Request starting HTTP/1.1 GET http://localhost:44313/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/info?t=1555506389662  
+Request finished in 19.371ms 304 
+Request finished in 31.1846ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:44313/sockjs-node/827/vfigtwak/websocket  
+Request starting HTTP/1.1 GET http://localhost:44313/manifest.json  
+Request finished in 15.9606ms 304 
+Request starting HTTP/1.1 POST http://localhost:44313/sockjs-node/827/4ewjtfzk/xhr_streaming?t=1555506390497  0
+Request finished in 1173.6346ms 101 
+Request starting HTTP/1.1 GET http://localhost:44313/static/js/bundle.js.map  
+Request finished in 1201.9367ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:44313/api/event/getByDate application/json 2
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10957.2259ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 11075.9118ms
+Request finished in 11360.7446ms 200 application/json; charset=utf-8
+Connection id "0HLM36LQBA3TO", Request id "0HLM36LQBA3TO:00000002": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44313/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Starting create-react-app server on port 49774...
+Request starting HTTP/1.1 GET http://localhost:44313/  
+> DailyPlanner.Web@0.1.0 start D:\Projects\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 20650.9587ms 304 
