@@ -25,25 +25,26 @@ namespace Repository.Models.DataManager
             //{
             //    d = DateTime.UtcNow;
             //}
-            return _context.Events.Where(p=>p.StartDate.Date==d.Date).ToList();
+            return _context.Events.Where(p => p.StartDate.Date == d.Date).ToList();
         }
-         
+
         public Event Get(Guid id)
         {
             var ev = _context.Events.FirstOrDefault(u => u.Id == id);
             return ev;
         }
 
-        public void Add(Event b)
+        public Guid Add(Event b)
         {
             _context.Events.Add(b);
             _context.SaveChanges();
+            return b.Id;
         }
 
-        public void Update(Guid id, Event b)
+        public Event Update(Guid id, Event b)
         {
             var ev = _context.Events.Find(id);
-            if (ev!=null)
+            if (ev != null)
             {
                 ev.Title = b.Title;
                 ev.Description = b.Description;
@@ -52,15 +53,18 @@ namespace Repository.Models.DataManager
                 ev.EndDate = b.EndDate;
                 ev.IsActive = b.IsActive;
             }
+            _context.SaveChanges();
+            return b;
         }
 
-        public void Delete(Event b)
+        public int Delete(Event b)
         {
             if (b != null)
             {
                 _context.Events.Remove(b);
-                _context.SaveChanges();
             }
+            _context.SaveChanges();
+            return _context.Events.Count();
         }
     }
 }

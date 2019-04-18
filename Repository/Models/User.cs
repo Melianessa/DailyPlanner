@@ -17,10 +17,8 @@ namespace Repository.Models
         [Key]
         public Guid Id { get; set; }
         [Column(TypeName = "varchar(20)")]
-        [Required]
         public string FirstName { get; set; }
         [Column(TypeName = "varchar(40)")]
-        [Required]
         public string LastName { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime DateOfBirth { get; set; }

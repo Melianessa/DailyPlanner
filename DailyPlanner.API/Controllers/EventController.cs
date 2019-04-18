@@ -41,23 +41,23 @@ namespace DailyPlanner.API.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] Event ev)
+        public Guid Post([FromBody] Event ev)
         {
-            _iRepo.Add(ev);
+            return _iRepo.Add(ev);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody] Event ev)
+        public Event Put(Guid id, [FromBody] Event ev)
         {
-            _iRepo.Update(id, ev);
+            return _iRepo.Update(id, ev);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(Event ev)
+        public int Delete(Event ev)
         {
-            _iRepo.Delete(ev);
+            return _iRepo.Delete(ev);
         }
     }
 }

@@ -25,13 +25,14 @@ namespace Repository.Models.DataManager
             return user;
         }
 
-        public void Add(User b)
+        public Guid Add(User b)
         {
             _context.Users.Add(b);
             _context.SaveChanges();
+            return b.Id;
         }
 
-        public void Update(Guid id, User b)
+        public User Update(Guid id, User b)
         {
             var user = _context.Users.Find(id);
             if (user != null)
@@ -43,17 +44,19 @@ namespace Repository.Models.DataManager
                 user.Phone = b.Phone;
                 user.Role = b.Role;
                 user.IsActive = b.IsActive;
-                _context.SaveChanges();
             }
+            _context.SaveChanges();
+            return b;
         }
 
-        public void Delete(User b)
+        public int Delete(User b)
         {
             if (b != null)
             {
                 _context.Users.Remove(b);
-                _context.SaveChanges();
             }
+            _context.SaveChanges();
+            return _context.Users.Count();
         }
     }
 }

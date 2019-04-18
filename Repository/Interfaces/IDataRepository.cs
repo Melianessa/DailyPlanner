@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Repository.Interfaces
 {
@@ -7,8 +8,8 @@ namespace Repository.Interfaces
     {
         IEnumerable<TEntity> GetAll ();
         TEntity Get(Guid id);
-        void Add(TEntity b);
-        void Update(Guid id, TEntity b);
-        void Delete(TEntity b);
+        Guid Add(TEntity b);
+        TEntity Update(Guid id, TEntity b);
+        int Delete(TEntity b);
     }
 }
