@@ -24,17 +24,18 @@ namespace DailyPlanner.Web.Controllers
         {
             _logger = logger;
         }
+
         [HttpPost]
-        public async Task<IEnumerable<Event>> GetByDate([Bind]string date) //try [FromBody] or [Bind]
+        public async Task<IEnumerable<Event>> GetByDate([FromBody] EventDate date) //try [FromBody]
         {
             List<Event> ev = new List<Event>();
             try
             {
                 HttpClient client = _userAPI.InitializeClient();
-                if (date == null)
-                {
-                    date = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
-                }
+                //if (date == null)
+                //{
+                //    date = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
+                //}
                 var content = new StringContent(JsonConvert.SerializeObject(date), Encoding.UTF8, "application/json");
                 // or JsonConvert.SerializeObject(date)
                 HttpResponseMessage res = await client.PostAsync("api/event/getByDate", content);

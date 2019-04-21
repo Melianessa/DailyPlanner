@@ -13,19 +13,22 @@ export class EventList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { events: [], loading: true, selectedDay: null };
+        let date = new Date();
+        this.state = { events: [], loading: true, selectedDay: date };
         this.handleDelete = this.handleDelete.bind(this);
         this.helperDelete = this.helperDelete.bind(this);
         this.handleDayClick = this.handleDayClick.bind(this);
         this.handleGetAll = this.handleGetAll.bind(this);
-        this.handleGetAll();
+        this.handleGetAll(new Date());
     }
     handleGetAll(day) {
-        let reqBody = { date: day };
+        let reqBody = { date: day.toLocaleDateString("en-US") };
 	    fetch('api/event/getByDate', {
             method: "POST",
             headers: {
                 "Accept": "application/json",
+                //application/x-www-form-urlencoded for methods without [FromBody]
+                //application/json for methods with [FromBody]
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(reqBody)

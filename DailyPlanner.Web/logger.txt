@@ -4488,3 +4488,1355 @@ Warning: React version not specified in eslint-plugin-react settings. See https:
 Compiled successfully!
 
 Request finished in 20650.9587ms 304 
+Starting create-react-app server on port 52666...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 39822.4364ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 266.5126ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 7.5293ms 200 font/woff2; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555875287840  
+Request finished in 7.0717ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/359/kcgi40pn/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 10.9304ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request finished in 10.2917ms 200 image/x-icon
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 2
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4093.1379ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 4188.1517ms
+Request finished in 4287.173ms 200 application/json; charset=utf-8
+Connection id "0HLM6I18H812B", Request id "0HLM6I18H812B:00000002": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 70.0147ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 75.368ms
+Request finished in 80.2196ms 200 application/json; charset=utf-8
+Connection id "0HLM6I18H812C", Request id "0HLM6I18H812C:00000002": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 39.6441ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 44.2622ms
+Request finished in 48.1077ms 200 application/json; charset=utf-8
+Connection id "0HLM6I18H812B", Request id "0HLM6I18H812B:00000003": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 38.1951ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 41.7021ms
+Request finished in 46.3909ms 200 application/json; charset=utf-8
+Connection id "0HLM6I18H812C", Request id "0HLM6I18H812C:00000003": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 41.1409ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 44.4631ms
+Request finished in 48.9679ms 200 application/json; charset=utf-8
+Connection id "0HLM6I18H812B", Request id "0HLM6I18H812B:00000004": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 38.9462ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 42.4089ms
+Request finished in 46.1946ms 200 application/json; charset=utf-8
+Connection id "0HLM6I18H812C", Request id "0HLM6I18H812C:00000004": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 1231.4873ms 200 application/json; charset=UTF-8
+Starting create-react-app server on port 53252...
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 16739.7199ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 380.1255ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 347.7789ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 2
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 13.2818ms 200 font/woff2; charset=UTF-8
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555875955346  
+Request finished in 7.6894ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/783/dgdjhn00/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 13.1254ms 200 image/x-icon
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/783/oc3ox4st/xhr_streaming?t=1555875956211  0
+Request finished in 1269.9284ms 200 application/json; charset=UTF-8
+Request finished in 1364.7145ms 101 
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3290.3635ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 3392.1414ms
+Request finished in 3508.4576ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8J", Request id "0HLM6I7MA4B8J:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request finished in 1044.1023ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 21.7447ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 12.0711ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555875986706  
+Request finished in 5.0153ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 15.1681ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/343/0brv3t5r/websocket  
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/343/xbjzsdxn/xhr_streaming?t=1555875987978  0
+Request finished in 1351.6628ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 2
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 54.8509ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 59.9757ms
+Request finished in 69.3136ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8M", Request id "0HLM6I7MA4B8M:00000004": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 1224.8229ms 200 application/json; charset=UTF-8
+Request finished in 50020.6693ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.6137ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 14.3855ms
+Request finished in 19.3202ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8M", Request id "0HLM6I7MA4B8M:00000006": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12.73ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 25.8004ms
+Request finished in 30.9285ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8M", Request id "0HLM6I7MA4B8M:00000007": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 1017.9657ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 272.3604ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 268.2086ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 2
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 6.8993ms 200 font/woff2; charset=UTF-8
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 229.6328ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 258.645ms
+Request finished in 263.4926ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8O", Request id "0HLM6I7MA4B8O:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555876106161  
+Request finished in 5.6805ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/679/4xbvpjy3/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 6.7051ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request finished in 21.7163ms 200 image/x-icon
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.2229ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 15.256ms
+Request finished in 22.202ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8N", Request id "0HLM6I7MA4B8N:00000007": the application completed without reading the entire request body.
+Request finished in 125066.3706ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.1434ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 13.5821ms
+Request finished in 17.8498ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8P", Request id "0HLM6I7MA4B8P:00000002": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.8017ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 22.6405ms
+Request finished in 27.3222ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8Q", Request id "0HLM6I7MA4B8Q:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.4246ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 30.5056ms
+Request finished in 36.0726ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8R", Request id "0HLM6I7MA4B8R:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 1016.9997ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 482475.306ms 101 
+Request finished in 343.6535ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 417.9666ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 2
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 12.885ms 200 font/woff2; charset=UTF-8
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 272.3219ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 305.8289ms
+Request finished in 317.5233ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8R", Request id "0HLM6I7MA4B8R:00000005": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555876596150  
+Request finished in 3.8047ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/805/cf10255v/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 22.072ms 200 image/x-icon
+Request finished in 1209.1525ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.9461ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 20.2851ms
+Request finished in 27.3717ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8S", Request id "0HLM6I7MA4B8S:00000004": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 35
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.966ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 20.9133ms
+Request finished in 31.4192ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B8S", Request id "0HLM6I7MA4B8S:00000005": the application completed without reading the entire request body.
+You can now view DailyPlanner.Web in the browser.
+
+  Local:            http://localhost:53252/
+  On Your Network:  http://10.0.75.1:53252/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/8798a65283c4813bb932.hot-update.json  
+Request finished in 1012.9446ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.8798a65283c4813bb932.hot-update.js  
+Request finished in 7.3795ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 9.1352ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.8798a65283c4813bb932.hot-update.js.map  
+Request finished in 8.5204ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 218590.1847ms 101 
+Request finished in 564.2635ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 328.6955ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 413.0452ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555876817853  
+Request finished in 4.6067ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/819/ho2znmla/websocket  
+Request finished in 9.1845ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 319.2235ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/819/nznej3yy/xhr_streaming?t=1555876818624  0
+Request finished in 1644.3141ms 200 application/javascript; charset=UTF-8
+Request finished in 1367.0992ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 320.6897ms 200 application/json; charset=UTF-8
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/1f5559a6a9dc53cc5c7f.hot-update.json  
+Request finished in 1010.7204ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.1f5559a6a9dc53cc5c7f.hot-update.js  
+Request finished in 11.4759ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 13.1596ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.1f5559a6a9dc53cc5c7f.hot-update.js.map  
+Request finished in 6.1372ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 450.2801ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555876890107  
+Request finished in 406.4284ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 416.7449ms 200 application/json; charset=UTF-8
+Request finished in 1145.7895ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 1541.5488ms 200 application/javascript; charset=UTF-8
+Request finished in 11.58ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/812/kzjamsqx/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 329.6741ms 200 application/json; charset=UTF-8
+Request finished in 307.3549ms 200 application/json; charset=UTF-8
+Request finished in 75140.7767ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 1037.2233ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 20780.1994ms 101 
+Request finished in 315.7224ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 323.2888ms 200 application/json; charset=UTF-8
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555876947834  
+Request finished in 1017.4134ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/324/lknooh24/websocket  
+Request finished in 1405.8707ms 200 application/javascript; charset=UTF-8
+Request finished in 1555.3609ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 355.9977ms 200 application/json; charset=UTF-8
+Request finished in 353.8242ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 15.6949ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 3533.6243ms 101 
+Request finished in 331.3679ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 26.4818ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 32.1145ms
+Request finished in 38.1673ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B95", Request id "0HLM6I7MA4B95:00000005": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 4.8123ms 200 font/woff2; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 408.3399ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555876956690  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 22.9459ms 200 application/json; charset=UTF-8
+Request finished in 15.2712ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/631/wfcjr2ol/websocket  
+Request finished in 17.3306ms 200 image/x-icon
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 64.7633ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 101.25ms
+Request finished in 111.2791ms 200 application/json; charset=utf-8
+Connection id "0HLM6I7MA4B95", Request id "0HLM6I7MA4B95:00000007": the application completed without reading the entire request body.
+Starting create-react-app server on port 54302...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 34232.9668ms 304 
+Request finished in 34581.0354ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 574.703ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 31.5496ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877056413  
+Request finished in 52.1604ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/173/fk2ec50l/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 26.276ms 304 
+You can now view DailyPlanner.Web in the browser.
+
+  Local:            http://localhost:54302/
+  On Your Network:  http://10.0.75.1:54302/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/7e130110339536e93174.hot-update.json  
+Request finished in 1194.5652ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.7e130110339536e93174.hot-update.js  
+Request finished in 13.6421ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request finished in 18.0773ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 708.7186ms 200 application/javascript; charset=UTF-8
+Request finished in 15514.7681ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877073051  
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 18.6346ms 200 application/json; charset=UTF-8
+Request finished in 34.8229ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/431/1kxa5zbh/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 26.9027ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/431/xbad1xfs/xhr_streaming?t=1555877073927  0
+Request finished in 1364.1177ms 101 
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/f9ab0f07248e41da1f63.hot-update.json  
+Request finished in 1215.5099ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.f9ab0f07248e41da1f63.hot-update.js  
+Request finished in 11.3072ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request finished in 15.8185ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 348.4254ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 16.7619ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877091829  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 72.6958ms 200 application/json; charset=UTF-8
+Request finished in 62.4512ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/954/p4t5ucb3/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 1106.2204ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 20.7336ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 333.4995ms 200 application/json; charset=UTF-8
+Request finished in 25049.0743ms 200 application/javascript; charset=UTF-8
+Request finished in 1245.7889ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 1051.007ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 26.3518ms 304 
+Request finished in 39811.2295ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 35.7908ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877132837  
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request finished in 164.387ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 46.1152ms 200 image/x-icon
+Request finished in 45.7654ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 55.8336ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 37.8213ms 304 
+Request finished in 1215.1622ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/592/ae3tys5q/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/__open-stack-frame-in-editor?fileName=C%3A%2FUsers%2FDaniela%2Fsource%2Frepos%2FDailyPlanner%2FDailyPlanner.Web%2FClientApp%2Fsrc%2Fcomponents%2FEventList.js&lineNumber=25&colNumber=1  
+Could not open EventList.js in the editor.
+
+Request finished in 4074.5238ms 200 
+Request starting HTTP/1.1 GET http://localhost:51884/__open-stack-frame-in-editor?fileName=C%3A%2FUsers%2FDaniela%2Fsource%2Frepos%2FDailyPlanner%2FDailyPlanner.Web%2FClientApp%2Fsrc%2Fcomponents%2FEventList.js&lineNumber=25&colNumber=1  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+
+To set up the editor integration, add something like REACT_EDITOR=atom to the .env.local file in your project folder and restart the development server. Learn more: https://goo.gl/MMTaZt
+
+
+
+Request finished in 3488.303ms 200 
+Request starting HTTP/1.1 GET http://localhost:51884/__open-stack-frame-in-editor?fileName=C%3A%2FUsers%2FDaniela%2Fsource%2Frepos%2FDailyPlanner%2FDailyPlanner.Web%2FClientApp%2Fsrc%2Fcomponents%2FEventList.js&lineNumber=25&colNumber=1  
+Could not open EventList.js in the editor.
+
+
+To set up the editor integration, add something like REACT_EDITOR=atom to the .env.local file in your project folder and restart the development server. Learn more: https://goo.gl/MMTaZt
+
+
+
+Request finished in 2841.4102ms 200 
+Could not open EventList.js in the editor.
+
+Request finished in 5677.848ms 200 application/json; charset=UTF-8
+
+To set up the editor integration, add something like REACT_EDITOR=atom to the .env.local file in your project folder and restart the development server. Learn more: https://goo.gl/MMTaZt
+
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/c90c08561088c72f86dc.hot-update.json  
+Request finished in 1287.334ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.c90c08561088c72f86dc.hot-update.js  
+Request finished in 11.6863ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 10.4925ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.c90c08561088c72f86dc.hot-update.js.map  
+Request finished in 8.5262ms 200 application/json; charset=UTF-8
+Request finished in 55382.454ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 344.1576ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 1375.6005ms 200 application/json; charset=UTF-8
+Request finished in 1434.1649ms 200 application/javascript; charset=UTF-8
+Request finished in 1548.4374ms 200 application/javascript; charset=UTF-8
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877205535  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 1460.0382ms 200 application/json; charset=UTF-8
+Request finished in 1554.0002ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/463/uvhmtpgb/websocket  
+Request finished in 1531.0171ms 200 application/json; charset=UTF-8
+Request finished in 1690.8936ms 200 application/json; charset=UTF-8
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/7b353c7a994212398804.hot-update.json  
+Request finished in 1131.7451ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.7b353c7a994212398804.hot-update.js  
+Request finished in 11.3963ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request starting HTTP/1.1 GET http://localhost:51884/0.7b353c7a994212398804.hot-update.js.map  
+Request finished in 26.3088ms 200 text/html; charset=UTF-8
+Request finished in 103.1767ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 15802.9444ms 101 
+Request finished in 667.6305ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Request finished in 365.3634ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 85.4795ms 200 font/woff2; charset=UTF-8
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877226377  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 17711.8462ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 17863.2831ms
+Request finished in 18246.4328ms 200 application/json; charset=utf-8
+Connection id "0HLM6IHOS2JP4", Request id "0HLM6IHOS2JP4:0000000A": the application completed without reading the entire request body.
+Request finished in 1102.8947ms 200 application/json; charset=UTF-8
+Request finished in 1197.6253ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Starting create-react-app server on port 54608...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request starting HTTP/1.1 DEBUG http://localhost:51884/  0
+Failed to determine the https port for redirect.
+Request finished in 61.2751ms 200 
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 29825.1737ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 758.7853ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 32.2081ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877321726  
+Request finished in 36.058ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/290/wyw2yz1x/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 45.4915ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/290/kpn51wyj/xhr_streaming?t=1555877323136  0
+Request finished in 1459.0987ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12682.8495ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12880.9481ms
+Request finished in 13043.7824ms 200 application/json; charset=utf-8
+Connection id "0HLM6IK9LNM0Q", Request id "0HLM6IK9LNM0Q:00000001": the application completed without reading the entire request body.
+Starting create-react-app server on port 55228...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request starting HTTP/1.1 DEBUG http://localhost:51884/  0
+Failed to determine the https port for redirect.
+Request finished in 78.9712ms 200 
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 22116.4706ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 611.8738ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 9.2735ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555877945147  
+Request finished in 29.6504ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/594/vthjmtt1/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 33.7935ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/594/k3bsgrv2/xhr_streaming?t=1555877946021  0
+Request finished in 1230.2017ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+You can now view DailyPlanner.Web in the browser.
+
+  Local:            http://localhost:55228/
+  On Your Network:  http://10.0.75.1:55228/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request starting HTTP/1.1 GET http://localhost:51884/f6fe90e0b3e3701c08b8.hot-update.json  
+Request finished in 1068.661ms 304 
+Request finished in 1049.7974ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 353.0731ms 200 application/javascript; charset=UTF-8
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 71467.4681ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 71776.9739ms
+Request finished in 71988.07ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555878019322  
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 103652.9792ms 200 application/javascript; charset=UTF-8
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 30645.2764ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 30779.1455ms
+Request finished in 30803.4159ms 200 application/json; charset=utf-8
+Request finished in 1148.9156ms 304 
+Request finished in 1202.5415ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request finished in 144.3054ms 200 application/json; charset=UTF-8
+Request finished in 177.7504ms 200 image/x-icon
+Request finished in 1729.1407ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4009.2247ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 4049.7821ms
+Request finished in 4089.999ms 200 application/json; charset=utf-8
+Starting create-react-app server on port 55479...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request starting HTTP/1.1 DEBUG http://localhost:51884/  0
+Failed to determine the https port for redirect.
+Request finished in 132.8278ms 200 
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 25921.0818ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 722.9629ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 12.712ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555878168408  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 144.1885ms 200 application/json; charset=UTF-8
+Request finished in 18.6009ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/944/lavhjmm5/websocket  
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate x-www-form-urlencoded 15
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6605.4801ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 6737.3978ms
+Request finished in 6931.8999ms 200 application/json; charset=utf-8
+Connection id "0HLM6IS768R0E", Request id "0HLM6IS768R0E:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate x-www-form-urlencoded 15
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Valid
+Starting create-react-app server on port 55672...
+Request starting HTTP/1.1 DEBUG http://localhost:51884/  0
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Failed to determine the https port for redirect.
+Request finished in 124.5024ms 200 
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 22457.6613ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 585.6092ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 12.7971ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555878332367  
+Request finished in 26.1593ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/889/aqwhivxx/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 24.488ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/889/y1je1ri0/xhr_streaming?t=1555878333236  0
+Request finished in 1154.9465ms 101 
+You can now view DailyPlanner.Web in the browser.
+
+  Local:            http://localhost:55672/
+  On Your Network:  http://10.0.75.1:55672/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/db47e3780fa213a2b4d8.hot-update.json  
+Request finished in 1045.5718ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.db47e3780fa213a2b4d8.hot-update.js  
+Request finished in 9.4135ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request finished in 17.1542ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 324.7117ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 56.137ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555878765896  
+Request finished in 35.7014ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/819/sgzubhx5/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 16.8265ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/819/smeghvi5/xhr_streaming?t=1555878767058  0
+Request finished in 1192.3103ms 101 
+Compiling...
+
+Request finished in 440553.9111ms 200 application/javascript; charset=UTF-8
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/68a008662640854b0923.hot-update.json  
+Request finished in 1015.101ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.68a008662640854b0923.hot-update.js  
+Request finished in 25.1233ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request finished in 26.1964ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 446.3151ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 10.6601ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555878778445  
+Request finished in 71.8816ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/635/qwhga1ps/websocket  
+Request finished in 17.9329ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/635/2aysh5qu/xhr_streaming?t=1555878779418  0
+Request finished in 1213.6475ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 15
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5238.2198ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 5660.9461ms
+Request finished in 5812.3083ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 15
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 34130.1651ms 200 application/javascript; charset=UTF-8
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13596.4082ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 13701.6501ms
+Request finished in 13744.625ms 200 application/json; charset=utf-8
+Request finished in 1413.3712ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 15
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3219.0328ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 3253.2094ms
+Request finished in 3285.5836ms 200 application/json; charset=utf-8
+  Line 25:  'reqBody' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/a66864c14efbae684aa8.hot-update.json  
+Request finished in 1033.1898ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.a66864c14efbae684aa8.hot-update.js  
+Request finished in 10.5086ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request starting HTTP/1.1 GET http://localhost:51884/0.a66864c14efbae684aa8.hot-update.js.map  
+Request finished in 24.4743ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 332.4013ms 200 application/javascript; charset=UTF-8
+Request finished in 1044.0831ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 15
+Request finished in 281.3317ms 200 application/json; charset=UTF-8
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555878859197  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4947.7282ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 5001.2982ms
+Request finished in 5145.2737ms 200 application/json; charset=utf-8
+Request finished in 1058.4596ms 200 application/json; charset=UTF-8
+Request finished in 1102.9119ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/901/mbf245xj/websocket  
+  Line 25:  'reqBody' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Request finished in 100783.8984ms 200 application/javascript; charset=UTF-8
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/28f33d9eacb9d4358b4c.hot-update.json  
+Request finished in 1048.7918ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.28f33d9eacb9d4358b4c.hot-update.js  
+Request finished in 27.2595ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request starting HTTP/1.1 GET http://localhost:51884/0.28f33d9eacb9d4358b4c.hot-update.js.map  
+Request finished in 85.1206ms 200 text/html; charset=UTF-8
+Request finished in 44.37ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 493.3646ms 200 application/javascript; charset=UTF-8
+Request finished in 18700.9093ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555878885443  
+Request finished in 1010.7741ms 200 application/json; charset=UTF-8
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 99.4318ms 200 application/json; charset=UTF-8
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/291/ieomvx5l/websocket  
+Request finished in 129.4224ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/291/xarpa2k2/eventsource  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/iframe.html  
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/291/rgfgqc32/xhr_streaming?t=1555878887970  0
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7693.3998ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 7861.4302ms
+Request finished in 8154.7701ms 200 application/json; charset=utf-8
+Request finished in 1195.9475ms 200 text/html; charset=UTF-8
+Request finished in 8914.1545ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/__webpack_dev_server__/sockjs.bundle.js  
+Request finished in 1507.799ms 200 text/event-stream
+Request finished in 1557.3223ms 200 application/javascript; charset=UTF-8
+Request finished in 132.8851ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/291/qir1ctbc/eventsource  
+Starting create-react-app server on port 56342...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request starting HTTP/1.1 DEBUG http://localhost:51884/  0
+Failed to determine the https port for redirect.
+Request finished in 271.6621ms 200 
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 28122.3386ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 772.351ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 45.5445ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555879006490  
+Request finished in 27.593ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/297/4hg0ky0o/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 39.9142ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/297/pi2strod/xhr_streaming?t=1555879007506  0
+Request finished in 1316.7826ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 170613.5013ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 170933.583ms
+Request finished in 171149.1571ms 200 application/json; charset=utf-8
+You can now view DailyPlanner.Web in the browser.
+
+  Local:            http://localhost:56342/
+  On Your Network:  http://10.0.75.1:56342/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/f6fe90e0b3e3701c08b8.hot-update.json  
+Request finished in 1018.032ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.f6fe90e0b3e3701c08b8.hot-update.js  
+Request finished in 20.4097ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 17.6959ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 686.818ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate x-www-form-urlencoded 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 73.3672ms
+Request finished in 176.3891ms 415 
+Connection id "0HLM6J4007N6T", Request id "0HLM6J4007N6T:00000005": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555880330687  
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 57.7588ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/619/tupqrwch/websocket  
+Request finished in 93.558ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 32.6886ms 304 
+Request finished in 1166.667ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 381.4187ms 200 application/json; charset=UTF-8
+Request finished in 1325095.9439ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 1043.4115ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 25.0652ms 304 
+Request finished in 18786.1475ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate x-www-form-urlencoded 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 8.9755ms
+Request finished in 29.745ms 415 
+Connection id "0HLM6J4007N6V", Request id "0HLM6J4007N6V:00000003": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 15.7675ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555880350564  
+Request finished in 148.685ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request finished in 174.3739ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/005/ltfyteey/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 135.4384ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 99.2672ms 304 
+Request finished in 1276.0432ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 1438.5737ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 1026.0684ms 200 text/html; charset=UTF-8
+Request finished in 41126.7759ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 474.6597ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate x-www-form-urlencoded 20
+Request finished in 272.9235ms 200 application/json; charset=UTF-8
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing HttpStatusCodeResult, setting HTTP status code 415
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 66.9598ms
+Request finished in 240.6357ms 415 
+Connection id "0HLM6J4007N6T", Request id "0HLM6J4007N6T:0000000E": the application completed without reading the entire request body.
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555880403746  
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 1019.8203ms 200 application/json; charset=UTF-8
+Request finished in 1117.5268ms 200 application/json; charset=UTF-8
+Request finished in 1126.9527ms 200 image/x-icon
+Request finished in 1382.9053ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 268.6487ms 200 application/json; charset=UTF-8
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 1049.2411ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 350.4025ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 317.1007ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json; charset=utf-8 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555880702757  
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5056.5599ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 5183.7297ms
+Request finished in 5422.8088ms 200 application/json; charset=utf-8
+Request finished in 1085.5542ms 200 application/json; charset=UTF-8
+Request finished in 1081.5457ms 200 image/x-icon
+Request finished in 1129.2391ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/108/un1zztzv/websocket  
+Compiling...
+
+Compiled successfully!
+
+Request starting HTTP/1.1 GET http://localhost:51884/6d922eef78b2ecb25cc9.hot-update.json  
+Request finished in 1012.6736ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.6d922eef78b2ecb25cc9.hot-update.js  
+Request finished in 9.2009ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/eventlist  
+Request finished in 14.2351ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.6d922eef78b2ecb25cc9.hot-update.js.map  
+Request finished in 9.1713ms 200 application/json; charset=UTF-8
+Request finished in 135481.7136ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 303.383ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 305.35ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments () - Validation state: Invalid
+Starting create-react-app server on port 58282...
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 20386.1548ms 200 application/javascript; charset=UTF-8
+Starting create-react-app server on port 58605...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 20361.8911ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 442.856ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 8.6439ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555881187595  
+Request finished in 13.3622ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/685/lbnecqp4/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 14.6355ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/685/ias5t0rn/xhr_streaming?t=1555881188412  0
+Request finished in 1103.0354ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (DailyPlanner.Web.Controllers.EventController+EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 301.0368ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 516.509ms
+Request finished in 608.5401ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (DailyPlanner.Web.Controllers.EventController+EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 27.8627ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 33.2687ms
+Request finished in 37.5261ms 200 application/json; charset=utf-8
+Starting create-react-app server on port 58670...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request starting HTTP/1.1 DEBUG http://localhost:51884/  0
+Failed to determine the https port for redirect.
+Request finished in 172.0295ms 200 
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 22487.5005ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 276.6101ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 21.4363ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555881242754  
+Request finished in 23.9241ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/497/duhmhzas/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 21.354ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/497/gasculq3/xhr_streaming?t=1555881243702  0
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Request finished in 1283.9345ms 101 
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (DailyPlanner.Web.Controllers.EventController+EventDate) - Validation state: Valid
+Starting create-react-app server on port 58872...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+Request finished in 16713.481ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 442.1611ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 10.0397ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555881453095  
+Request finished in 11.9982ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/131/fxx3chnr/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 11.2672ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/131/hswjx3ki/xhr_streaming?t=1555881453947  0
+Request finished in 1125.957ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 611.8948ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 766.1976ms
+Request finished in 850.7496ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 124.2791ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 136.4464ms
+Request finished in 141.1699ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.5975ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 13.6044ms
+Request finished in 18.0451ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.7011ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 15.5857ms
+Request finished in 19.9963ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.6482ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 14.6525ms
+Request finished in 19.1654ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.1914ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 13.9949ms
+Request finished in 17.9141ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.7233ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.7291ms
+Request finished in 17.3128ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.1003ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.8044ms
+Request finished in 16.4757ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.9096ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 14.5707ms
+Request finished in 18.7075ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.5637ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.244ms
+Request finished in 16.4412ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.814ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.7739ms
+Request finished in 16.8877ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.6445ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.8346ms
+Request finished in 16.7873ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.7418ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.5344ms
+Request finished in 17.1033ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.1011ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 13.1235ms
+Request finished in 17.9537ms 200 application/json; charset=utf-8
+Starting create-react-app server on port 58964...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled successfully!
+
+You can now view DailyPlanner.Web in the browser.
+
+  Local:            http://localhost:58964/
+  On Your Network:  http://10.0.75.1:58964/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Request finished in 18931.9503ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 161.8953ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 4.9113ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1555881530023  
+Request finished in 16.4383ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/128/kpnhghzo/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 8.5591ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/128/qv133ujv/xhr_streaming?t=1555881530880  0
+Request finished in 1086.1149ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 664.8967ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 791.903ms
+Request finished in 878.6267ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 127.3796ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 139.2671ms
+Request finished in 143.8084ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.2704ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 14.931ms
+Request finished in 19.8147ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.3408ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.2572ms
+Request finished in 16.6872ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.3829ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 13.2664ms
+Request finished in 18.5102ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/json 20
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (Repository.Models.EventDate) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.5309ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Repository.Event, Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 12.1886ms
+Request finished in 16.3676ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 1285.6395ms 200 application/json; charset=UTF-8

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using Repository.Interfaces;
+using Repository.Models;
 
 namespace DailyPlanner.API.Controllers
 {
@@ -20,7 +21,7 @@ namespace DailyPlanner.API.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<Event> GetByDate([FromBody]string date)
+        public IEnumerable<Event> GetByDate([FromBody]EventDate date)
         {
             return _iEventRepo.GetByDate(date);
         }
