@@ -10,8 +10,8 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(PlannerDBContext))]
-    [Migration("20190416063516_DPInit")]
-    partial class DPInit
+    [Migration("20190421194432_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,7 +36,9 @@ namespace Repository.Migrations
 
                     b.Property<DateTime>("StartDate");
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)");
 
                     b.Property<int>("Type");
 
@@ -60,11 +62,13 @@ namespace Repository.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .HasColumnType("varchar(20)");
 
                     b.Property<bool>("IsActive");
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .HasColumnType("varchar(40)");
 
                     b.Property<string>("Phone");
 
