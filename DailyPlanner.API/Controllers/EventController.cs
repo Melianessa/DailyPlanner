@@ -21,7 +21,7 @@ namespace DailyPlanner.API.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<Event> GetByDate([FromBody]EventDate date)
+        public IEnumerable<Event> GetByDate([FromBody] string date)
         {
             return _iEventRepo.GetByDate(date);
         }

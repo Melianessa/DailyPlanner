@@ -7,6 +7,6 @@ namespace Repository.Interfaces
 {
     public interface IEventBase<TEntity> where TEntity:class
     {
-        IEnumerable<TEntity> GetByDate(EventDate date);
+        IEnumerable<TEntity> GetByDate(string date);
     }
 }

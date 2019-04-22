@@ -2,9 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Repository.Interfaces;
-using Repository.Models;
 
-namespace Repository
+namespace Repository.Models
 {
     public class Event : IBase
     {

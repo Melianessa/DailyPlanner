@@ -26,7 +26,7 @@ namespace DailyPlanner.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IEnumerable<Event>> GetByDate([FromBody] EventDate date) //try [FromBody]
+        public async Task<IEnumerable<Event>> GetByDate(string date) //try [FromBody]
         {
             List<Event> ev = new List<Event>();
             try
@@ -52,61 +52,58 @@ namespace DailyPlanner.Web.Controllers
 
             return ev;
         }
-        [HttpGet]
-        public async Task<IEnumerable<Event>> GetAll()
-        {
-            List<Event> ev = new List<Event>();
-            try
-            {
-                HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync("api/event");
-                if (res.IsSuccessStatusCode)
-                {
-                    var result = res.Content.ReadAsStringAsync().Result;
-                    ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.StartDate).ToList();
-                }
-            }
-            catch (Exception e)
-            {
-                _logger.LogWarning($"Error in GetAll method: {e.Message}");
-            }
+        //[HttpGet]
+        //public async Task<IEnumerable<Event>> GetAll()
+        //{
+        //    List<Event> ev = new List<Event>();
+        //    try
+        //    {
+        //        HttpClient client = _userAPI.InitializeClient();
+        //        HttpResponseMessage res = await client.GetAsync("api/event");
+        //        if (res.IsSuccessStatusCode)
+        //        {
+        //            var result = res.Content.ReadAsStringAsync().Result;
+        //            ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.StartDate).ToList();
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.LogWarning($"Error in GetAll method: {e.Message}");
+        //    }
 
-            return ev;
-        }
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
-        {
-            List<Event> evs = new List<Event>();
-            try
-            {
-                HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/event/{id}");
-                if (res.IsSuccessStatusCode)
-                {
-                    var result = res.Content.ReadAsStringAsync().Result;
-                    evs = JsonConvert.DeserializeObject<List<Event>>(result);
-                }
-                var ev = evs.SingleOrDefault(m => m.Id == id);
-                if (ev == null)
-                {
-                    _logger.LogWarning("Error in Get method, event is NULL");
-                    return NotFound();
-                }
+        //    return ev;
+        //}
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> Get(Guid id)
+        //{
+        //    List<Event> evs = new List<Event>();
+        //    try
+        //    {
+        //        HttpClient client = _userAPI.InitializeClient();
+        //        HttpResponseMessage res = await client.GetAsync($"api/event/{id}");
+        //        if (res.IsSuccessStatusCode)
+        //        {
+        //            var result = res.Content.ReadAsStringAsync().Result;
+        //            evs = JsonConvert.DeserializeObject<List<Event>>(result);
+        //        }
+        //        var ev = evs.SingleOrDefault(m => m.Id == id);
+        //        if (ev == null)
+        //        {
+        //            _logger.LogWarning("Error in Get method, event is NULL");
+        //            return NotFound();
+        //        }
 
-                return Ok(ev);
-            }
-            catch (Exception e)
-            {
-                _logger.LogWarning($"Error in Get method: {e.Message}");
-            }
+        //        return Ok(ev);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.LogWarning($"Error in Get method: {e.Message}");
+        //    }
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(
-            [Bind("Id,Title,Description,CreationDate,StartDate,EndDate,Type,UserId,IsActive")]
-            Event ev)
+        public async Task<IActionResult> Create([FromBody]Event ev)
         {
             try
             {
@@ -119,7 +116,7 @@ namespace DailyPlanner.Web.Controllers
                     HttpResponseMessage res = await client.PostAsync("api/event", content);
                     if (res.IsSuccessStatusCode)
                     {
-                        return RedirectToAction("GetAll");
+                        return RedirectToAction("GetByDate");
                     }
                 }
             }

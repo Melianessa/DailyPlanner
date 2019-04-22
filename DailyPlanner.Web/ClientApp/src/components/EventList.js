@@ -23,18 +23,18 @@ export class EventList extends Component {
     }
     handleGetAll(day) {
         let reqBody = { date: day.toLocaleDateString("en-US") };
-	    fetch('api/event/getByDate', {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                //application/x-www-form-urlencoded for methods without [FromBody]
-                //application/json for methods with [FromBody]
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(reqBody)
-        }).then(response => {
+        fetch('api/event/getByDate', {
+	        method: "POST",
+	        headers: {
+		        //"Accept": "application/json",
+		        //application/x-www-form-urlencoded for methods without [FromBody]
+		        //application/json for methods with [FromBody]
+                "Content-Type": "application/x-www-form-urlencoded"
+	        },
+	        body: new URLSearchParams(reqBody).toString()
+    }).then(response => {
             const json = response.json();
-	        console.log(json);
+            console.log(json);
             return json;
         }).then(data => {
             console.log(data);
@@ -55,13 +55,13 @@ export class EventList extends Component {
             {
                 method: "DELETE"
             })
-	        .then(this.setState({
+            .then(this.setState({
                 events: this.state.events.filter((rec) => {
                     return (rec.id !== id);
                 })
             })
 
-        );
+            );
 
     }
 
@@ -84,7 +84,7 @@ export class EventList extends Component {
 
 
     handleEdit(id) {
-        this.props.history.push(`api/event/edit/${id}`);
+        this.props.history.push('api/event/update/' + { id });
     }
     renderEvent(events) {
         return (

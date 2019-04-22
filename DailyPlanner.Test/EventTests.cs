@@ -2,13 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Repository;
-using Repository.Interfaces;
 using Repository.Models.DataManager;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
+using Repository.Models;
 
 namespace DailyPlanner.Test
 {
