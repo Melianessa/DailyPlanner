@@ -52,27 +52,27 @@ namespace DailyPlanner.Web.Controllers
 
             return ev;
         }
-        //[HttpGet]
-        //public async Task<IEnumerable<Event>> GetAll()
-        //{
-        //    List<Event> ev = new List<Event>();
-        //    try
-        //    {
-        //        HttpClient client = _userAPI.InitializeClient();
-        //        HttpResponseMessage res = await client.GetAsync("api/event");
-        //        if (res.IsSuccessStatusCode)
-        //        {
-        //            var result = res.Content.ReadAsStringAsync().Result;
-        //            ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.StartDate).ToList();
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        _logger.LogWarning($"Error in GetAll method: {e.Message}");
-        //    }
+        [HttpGet]
+        public async Task<IEnumerable<Event>> GetAll()
+        {
+            List<Event> ev = new List<Event>();
+            try
+            {
+                HttpClient client = _userAPI.InitializeClient();
+                HttpResponseMessage res = await client.GetAsync("api/event/getAll");
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = await res.Content.ReadAsStringAsync();
+                    ev = JsonConvert.DeserializeObject<List<Event>>(result).OrderBy(p => p.StartDate).ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                _logger.LogWarning($"Error in GetAll method: {e.Message}");
+            }
 
-        //    return ev;
-        //}
+            return ev;
+        }
         //[HttpGet("{id}")]
         //public async Task<IActionResult> Get(Guid id)
         //{
@@ -113,7 +113,7 @@ namespace DailyPlanner.Web.Controllers
 
                     var content = new StringContent(JsonConvert.SerializeObject(ev), Encoding.UTF8,
                         "application/json");
-                    HttpResponseMessage res = await client.PostAsync("api/event", content);
+                    HttpResponseMessage res = await client.PostAsync("api/event/post", content);
                     if (res.IsSuccessStatusCode)
                     {
                         return RedirectToAction("GetByDate");
@@ -140,7 +140,7 @@ namespace DailyPlanner.Web.Controllers
                 }
                 Event ev = new Event();
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/event/{id}");
+                HttpResponseMessage res = await client.GetAsync($"api/event/put/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
@@ -164,7 +164,6 @@ namespace DailyPlanner.Web.Controllers
         }
 
         [HttpPut("{id}")]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id,
             [Bind("Id,Title,Description,CreationDate,StartDate,EndDate,Type,UserId,IsActive")]
             Event ev)
@@ -182,10 +181,10 @@ namespace DailyPlanner.Web.Controllers
                     HttpClient client = _userAPI.InitializeClient();
 
                     var content = new StringContent(JsonConvert.SerializeObject(ev), Encoding.UTF8, "application/json");
-                    HttpResponseMessage res = await client.PutAsync($"api/event/{id}", content);
+                    HttpResponseMessage res = await client.PutAsync($"api/event/put/{id}", content);
                     if (res.IsSuccessStatusCode)
                     {
-                        return RedirectToAction("GetAll");
+                        return RedirectToAction("GetByDate");
                     }
                 }
             }

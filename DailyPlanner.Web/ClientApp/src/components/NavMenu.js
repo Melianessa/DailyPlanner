@@ -28,7 +28,7 @@ export class NavMenu extends Component {
                                 <Glyphicon glyph='apple' /> Counter
               </NavItem>
                         </LinkContainer>
-                        <LinkContainer to={'/fetchdata'}>
+                        <LinkContainer to={'/user'}>
                             <NavItem>
                                 <Glyphicon glyph='user' /> User
               </NavItem>
@@ -38,9 +38,9 @@ export class NavMenu extends Component {
                                 <Glyphicon glyph='th-list' /> Events
               </NavItem>
                         </LinkContainer>
-	                    <LinkContainer to={'/test'}>
+	                    <LinkContainer to={'/create'}>
 		                    <NavItem>
-			                    <Glyphicon glyph='th-list' /> Test
+			                    <Glyphicon glyph='th-list' /> Create new event
 		                    </NavItem>
 	                    </LinkContainer>
                     </Nav>

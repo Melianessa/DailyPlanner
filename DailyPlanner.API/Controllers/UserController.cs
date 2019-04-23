@@ -9,7 +9,7 @@ using Repository.Models;
 
 namespace DailyPlanner.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
 
     public class UserController : ControllerBase
     {

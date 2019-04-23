@@ -16,7 +16,7 @@ namespace Repository.Models.DataManager
         }
         public IEnumerable<User> GetAll()
         {
-            return _context.Users.Include(e => e.Events).ToList();
+            return _context.Users.Include(e=>e.Events).ToList();
         }
 
         public User Get(Guid id)

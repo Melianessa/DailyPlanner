@@ -1,109 +1,168 @@
 ﻿import React, { Component } from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, Redirect } from 'react-router-dom';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import { EventList } from './EventList';
 
 export class AddEvent extends Component {
     constructor(props) {
+        let typeList = [
+            { name: "Meeting", value: 0 }, { name: "Reminder", value: 1 }, { name: "Event", value: 2 },
+            { name: "Task", value: 3 }
+        ];
         super(props);
-        let date = new Date();
-        this.state = { events: [], loading: true, selectedDay: date, title: "", typeList: [{ name: "Meeting", value: 0 }, { name: "Reminder", value: 1 }, { name: "Event", value: 2 }, { name:"Task", value:3 }] };
-        var eventid = this.props.match.params["eventid"];
-        if (eventid > 0) {
-            fetch('api/event/update/' + eventid)
-                .then(response => {
-                    const json = response.json();
-                    console.log(json);
-                    return json;
-                })
-                .then(data => {
-                    console.log(data);
-                    this.setState({
-                        events: data,
-                        loading: false, title: "Edit "
-                    });
-                });
-        } else {
-            this.state = { loading: false, events: new Event, title: "Create ", typeList: [{ name: "Meeting", value: 0 }, { name: "Reminder", value: 1 }, { name: "Event", value: 2 }, { name: "Task", value: 3 }] }
+        this.state = {
+            title: '',
+            description: '',
+            type: typeList,
+            selectedType: null,
+            redirect: false,
+            startDate: new Date(),
+            endDate: new Date()
         }
-        this.handleSave = this.handleSave.bind(this);
-        this.handleCancel = this.handleCancel.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeType = this.handleChangeType.bind(this);
+        this.handleChangeDate = this.handleChangeDate.bind(this);
+        this.handleChangeDateEnd = this.handleChangeDateEnd.bind(this);
     }
-    handleSave(event, id) {
-        event.preventDefault();
-        const data = new FormData(event.target);
-        if (this.state.events.id) {
-            fetch('api/event/update/' + id,
-                {
-                    method: 'PUT',
-                    body: data
-                }).then((response) => response.json())
-                .then((responseJson) => {
-                    this.props.history.push("/eventlist");
-                });
-        } else {
-            fetch('api/event/create/' + id,
-                {
-                    method: 'POST',
-                    body: data
-                }).then((response) => response.json())
-                .then((responseJson) => {
-                    this.props.history.push("/eventlist");
-                });
+    handleChange(e) {
+        this.setState({ title: e.target.value });
+    }
+    handleChangeDesc(e) {
+        this.setState({ description: e.target.value });
+    }
+    handleChangeDate(date) {
+        this.setState({
+            startDate: date
+        });
+    }
+    handleChangeDateEnd(date) {
+        this.setState({
+            endDate: date
+        });
+    }
+    handleChangeType(e) {
+        var newType = e.target.value;
+        this.setState({ selectedType: newType });
+        console.log(e.target.value);
+    }
+    handleClick(title, description, selectedType) {
+        let body = {
+            Title: title,
+            Description: description,
+            Type: selectedType,
+            StartDate: this.state.startDate,
+            EndDate: this.state.endDate
+        }
+        this.setState({ redirect: true });
+        //setTimeout(() => {
+        //    this.setState({ redirect: true })}, 2000);
+        fetch('api/event/create',
+            {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(body)
+            });
+
+    }
+    handleSubmit() {
+        NotificationManager.success('Success message', 'Event successfully added!', 1000000);
+    }
+    renderRedirect() {
+        if (this.state.redirect) {
+            return <Redirect to='/eventlist' component={EventList} />
         }
     }
-
-    handleCancel(e) {
-        e.preventDefault();
-        this.props.history.push("/eventlist");
-    }
-
-    renderCreateEvent(events) {
-        return (<form onSubmit={this.handleSave} >
-            <div className="form-group row" >
-                <input type="hidden" name="eventid" value={this.state.events.id} />
-            </div>
-            <div className="form-group row">
-                <label className=" control-label col-md-12" htmlFor="Title">Title</label>
-                <div className="col-md-4">
-                    <input className="form-control" type="text" name="title" defaultValue={this.state.events.title
-                    } required />
+    renderCreateForm() {
+        return <form onSubmit={this.handleSubmit.bind(this, this.state.title)}>
+            <div>
+                <div className="form-group row">
+                    <label className=" control-label col-md-12">Title:</label>
+                    <div className="col-md-4">
+                        <input className="form-control"
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.handleChange}
+                            placeholder="Write a title..." />
+                    </div>
                 </div>
-            </div>
-            <label className=" control-label col-md-12" htmlFor="Description">Description</label>
-            <div className="col-md-4">
-                <input className="form-control" type="text" name="description" defaultValue={this.state.events.description
-                } required />
-            </div>
-            <div className="form-group row">
-                <label className="control-label col-md-12" htmlFor="Type">Type</label>
-                <div className="col-md-4">
-                    <select className="form-control" data-val="true" name="Type" defaultValue={this.state.events.type
-                    } required>
-                        <option value="">-- Select type --</option>
-                        {this.state.typeList.map(et =>
-                            <option value={et.value}>{et.name}</option>
-                        )}
-                    </select>
+                <div className="form-group row">
+                    <label className=" control-label col-md-12">Description:</label>
+                    <div className="col-md-4">
+                        <input className="form-control"
+                            type="text"
+                            value={this.state.description}
+                            onChange={this.handleChangeDesc.bind(this)}
+                            placeholder="Write a description..." />
+                    </div>
                 </div>
-            </div >
-            <div className="form-group">
-                <button type="submit" className="btn btn-default">Save</button>
-                <button className="btn" onClick={this.handleCancel}>Cancel</button>
-            </div >
-        </form >
-        );
-    }
+                <div className="form-group row">
+                    <label className=" control-label col-md-12">Type: </label>
+                    <div className="col-md-4">
+                        <select className="form-control" value={this.state.selectedType} onChange={this.handleChangeType} >
+                            <option value="">-- Select type --</option>
+                            {this.state.type.map(et =>
+                                <option key={et.name} value={et.value}>{et.name}</option>
 
+                            )}
+                        </select>
+                    </div>
+                </div >
+                <div className="form-group row">
+                    <label className=" control-label col-md-12">Start date: </label>
+                    <div className="col-md-4">
+                        <DatePicker className="form-control"
+                            selected={this.state.startDate}
+                            onChange={this.handleChangeDate}
+                            showTimeSelect
+                            timeFormat="HH:mm"
+                            timeIntervals={15}
+                            dateFormat="MMMM d, yyyy h:mm aa"
+                            timeCaption="time"
+                        />
+                    </div>
+                </div>
+                <div className="form-group row">
+                    <label className=" control-label col-md-12">End date: </label>
+                    <div className="col-md-4">
+                        <DatePicker className="form-control"
+                            selected={this.state.endDate}
+                            onChange={this.handleChangeDateEnd}
+                            showTimeSelect
+                            timeFormat="HH:mm"
+                            timeIntervals={15}
+                            dateFormat="MMMM d, yyyy h:mm aa"
+                            timeCaption="time"
+                        />
+                    </div>
+                </div>
+                <div className="form-group">
+                    <button className="btn btn-success" onClick={this.handleClick.bind(this, this.state.title, this.state.description, this.state.selectedType)}>Save event</button>
+                </div>
+                {this.renderRedirect()}
+            </div>
+            <NotificationContainer />
+        </form>
+    }
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : this.renderCreateEvent();
+            : this.renderCreateForm();
 
-        return <div>
-            <h1>{this.state.title}</h1>
-            <h3>Employee</h3>
-            <hr />
-            {contents}
-        </div>;
+        return (
+            <div>
+                <h1>Create event</h1>
+                <p>Complete the following fields.</p>
+
+                {contents}
+            </div>
+        );
+
     }
 }

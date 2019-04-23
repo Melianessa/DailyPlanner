@@ -5,8 +5,8 @@ import "./NavMenu.css";
 import "./style.css";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
-import DayPicker from "react-day-picker";
-import "react-day-picker/lib/style.css";
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
 
 export class EventList extends Component {
     static displayName = EventList.name;
@@ -24,15 +24,15 @@ export class EventList extends Component {
     handleGetAll(day) {
         let reqBody = { date: day.toLocaleDateString("en-US") };
         fetch('api/event/getByDate', {
-	        method: "POST",
-	        headers: {
-		        //"Accept": "application/json",
-		        //application/x-www-form-urlencoded for methods without [FromBody]
-		        //application/json for methods with [FromBody]
+            method: "POST",
+            headers: {
+                //"Accept": "application/json",
+                //application/x-www-form-urlencoded for methods without [FromBody]
+                //application/json for methods with [FromBody]
                 "Content-Type": "application/x-www-form-urlencoded"
-	        },
-	        body: new URLSearchParams(reqBody).toString()
-    }).then(response => {
+            },
+            body: new URLSearchParams(reqBody).toString()
+        }).then(response => {
             const json = response.json();
             console.log(json);
             return json;
@@ -91,12 +91,7 @@ export class EventList extends Component {
             <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th>Date: {this.state.selectedDay
-                            ? this.state.selectedDay.toLocaleDateString()
-                            : "Please select a day"}
-                            <div>
-                                <DayPicker onDayClick={this.handleGetAll} selectedDays={this.state.selectedDay} />
-                            </div>
+                        <th>Date: <DatePicker onChange={this.handleGetAll} selected={this.state.selectedDay} />
                         </th>
                         <th>Event</th>
                     </tr>

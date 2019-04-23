@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using DailyPlanner.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -13,29 +14,32 @@ using Repository.Models;
 
 namespace DailyPlanner.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class UserController : Controller
     {
         APIHelper _userAPI = new APIHelper();
         private readonly ILogger _logger;
+        private readonly IMapper _mapper;
 
-        public UserController(ILogger<UserController> logger)
+        public UserController(ILogger<UserController> logger, IMapper mapper)
         {
             _logger = logger;
+            _mapper = mapper;
         }
 
-        [HttpGet("[action]")]
-        public async Task<IEnumerable<User>> GetAll()
+        [HttpGet]
+        public async Task<IEnumerable<UserDTO>> GetAll()
         {
-            List<User> user = new List<User>();
+            List<UserDTO> user = new List<UserDTO>();
             try
             {
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync("api/user");
-                if (res.IsSuccessStatusCode)
+                HttpResponseMessage res = await client.GetAsync("api/user/getAll");
+                HttpResponseMessage resEvent = await client.GetAsync("api/event/getAll");
+                if (res.IsSuccessStatusCode&& resEvent.IsSuccessStatusCode)
                 {
-                    var result = res.Content.ReadAsStringAsync().Result;
-                    user = JsonConvert.DeserializeObject<List<User>>(result).OrderBy(p=>p.CreationDate).ToList();
+                    var result = await res.Content.ReadAsStringAsync();
+                    user = JsonConvert.DeserializeObject<List<UserDTO>>(result).OrderBy(p=>p.CreationDate).ToList();
                 }
             }
             catch (Exception e)
@@ -46,35 +50,34 @@ namespace DailyPlanner.Web.Controllers
             return user;
         }
 
-        [HttpGet("[action]")]
-        public async Task<IActionResult> Get(Guid id)
-        {
-            List<User> users = new List<User>();
-            try
-            {
-                HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/user/{id}");
-                if (res.IsSuccessStatusCode)
-                {
-                    var result = res.Content.ReadAsStringAsync().Result;
-                    users = JsonConvert.DeserializeObject<List<User>>(result);
-                }
-                var user = users.SingleOrDefault(m => m.Id == id);
-                if (user == null)
-                {
-                    _logger.LogWarning("Error in Get method, user is NULL");
-                    return NotFound();
-                }
-                return Ok(user);
-            }
-            catch (Exception e)
-            {
-                _logger.LogWarning($"Error in Get method: {e.Message}");
-            }
-            return Ok();
-        }
-        [HttpPost("[action]")]
-        [ValidateAntiForgeryToken]
+        //[HttpGet("[action]")]
+        //public async Task<IActionResult> Get(Guid id)
+        //{
+        //    List<User> users = new List<User>();
+        //    try
+        //    {
+        //        HttpClient client = _userAPI.InitializeClient();
+        //        HttpResponseMessage res = await client.GetAsync($"api/user/{id}");
+        //        if (res.IsSuccessStatusCode)
+        //        {
+        //            var result = res.Content.ReadAsStringAsync().Result;
+        //            users = JsonConvert.DeserializeObject<List<User>>(result);
+        //        }
+        //        var user = users.SingleOrDefault(m => m.Id == id);
+        //        if (user == null)
+        //        {
+        //            _logger.LogWarning("Error in Get method, user is NULL");
+        //            return NotFound();
+        //        }
+        //        return Ok(user);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.LogWarning($"Error in Get method: {e.Message}");
+        //    }
+        //    return Ok();
+        //}
+        [HttpPost]
         public async Task<IActionResult> Create(
             [Bind("Id,FirstName,LastName,CreationDate,DateOfBirth,Phone,Email,Sex,IsActive,Role")]
             User user)
@@ -86,7 +89,7 @@ namespace DailyPlanner.Web.Controllers
                 {
                     var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8,
                         "application/json");
-                    HttpResponseMessage res = await client.PostAsync("api/user", content);
+                    HttpResponseMessage res = await client.PostAsync("api/user/post", content);
                     if (res.IsSuccessStatusCode)
                     {
                         return RedirectToAction("GetAll");
@@ -114,7 +117,7 @@ namespace DailyPlanner.Web.Controllers
 
                 List<User> users = new List<User>();
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/user/{id}");
+                HttpResponseMessage res = await client.GetAsync($"api/user/put/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
@@ -139,7 +142,6 @@ namespace DailyPlanner.Web.Controllers
         }
 
         [HttpPut("{id}")]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id,
             [Bind("Id,FirstName,LastName,CreationDate,DateOfBirth,Phone,Email,Sex,IsActive,Role")]
             User user)
@@ -157,7 +159,7 @@ namespace DailyPlanner.Web.Controllers
                     HttpClient client = _userAPI.InitializeClient();
 
                     var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
-                    HttpResponseMessage res = await client.PutAsync($"api/user/{id}", content);
+                    HttpResponseMessage res = await client.PutAsync($"api/user/put/{id}", content);
                     if (res.IsSuccessStatusCode)
                     {
                         return RedirectToAction("GetAll");
@@ -183,11 +185,11 @@ namespace DailyPlanner.Web.Controllers
                 }
                 User user = new User();
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/user/{id}");
+                HttpResponseMessage res = await client.GetAsync($"api/user/delete/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
-                    var result = res.Content.ReadAsStringAsync().Result;
+                    var result = await res.Content.ReadAsStringAsync();
                     user = JsonConvert.DeserializeObject<User>(result);
                 }
                 if (user == null)
@@ -203,27 +205,5 @@ namespace DailyPlanner.Web.Controllers
             }
             return Ok();
         }
-
-        //[HttpDelete]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult DeleteConfirmed(Guid id)
-        //{
-        //    try
-        //    {
-        //        HttpClient client = _userAPI.InitializeClient();
-        //        HttpResponseMessage res = client.DeleteAsync($"api/user/{id}").Result;
-        //        if (res.IsSuccessStatusCode)
-        //        {
-        //            return RedirectToAction("GetAll");
-        //        }
-
-        //        return NotFound();
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        _logger.LogWarning(e.Message);
-        //    }
-        //    return Ok();
-        //}
-    }
+        }
 }
