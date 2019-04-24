@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Repository.Interfaces;
+using DailyPlanner.DomainClasses.Interfaces;
+using DailyPlanner.DomainClasses.Models;
+using DailyPlanner.Repository;
 
-
-namespace Repository.Models.DataManager
+namespace Repository
 {
-    public class EventManager : IDataRepository<Event>, IEventBase<Event>
+    public class EventRepository : IDataRepository<Event>, IEventBase<Event>
     {
-        private readonly PlannerDBContext _context;
+        private readonly PlannerDbContext _context;
 
-        public EventManager(PlannerDBContext context)
+        public EventRepository(PlannerDbContext context)
         {
             _context = context;
         }

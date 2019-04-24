@@ -2,11 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Repository;
-using Repository.Models.DataManager;
 using System;
 using System.Globalization;
 using System.Linq;
-using Repository.Models;
+using DailyPlanner.DomainClasses.Enums;
+using DailyPlanner.DomainClasses.Models;
+using DailyPlanner.Repository;
+
 
 namespace DailyPlanner.Test
 {
@@ -19,19 +21,19 @@ namespace DailyPlanner.Test
              new Event() { Id=Guid.NewGuid(), Title = "Wedding", Description = "my wedding", StartDate = new DateTime(2018, 10, 12, 09, 09, 09), EndDate = new DateTime(2018, 10, 24, 09, 09, 09), Type = EventEnum.Event },
              new Event() { Id=Guid.NewGuid(), Title = "Work", Description = "my work", StartDate = new DateTime(2019, 10, 12, 09, 09, 09), EndDate = new DateTime(2019, 10, 27, 09, 09, 09), Type = EventEnum.Task }
             }.OrderBy(p => p.Title).ToArray();
-        private readonly EventManager _eventRepository;
-        public static DbContextOptions<PlannerDBContext> DbContextOptions { get; }
+        private readonly EventRepository _eventRepository;
+        public static DbContextOptions<PlannerDbContext> DbContextOptions { get; }
         public static string ConnectionString = "Server=(localdb)\\MSSQLLocalDB;Database=TestPlannerDB;Trusted_Connection=True;";
         static EventTests()
         {
-            DbContextOptions = new DbContextOptionsBuilder<PlannerDBContext>()
+            DbContextOptions = new DbContextOptionsBuilder<PlannerDbContext>()
                 .UseSqlServer(ConnectionString)
                 .Options;
         }
         public EventTests()
         {
-            var context = new PlannerDBContext(DbContextOptions);
-            _eventRepository = new EventManager(context);
+            var context = new PlannerDbContext(DbContextOptions);
+            _eventRepository = new EventRepository(context);
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             context.Events.AddRange(_events);

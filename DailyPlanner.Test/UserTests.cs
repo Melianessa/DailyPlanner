@@ -2,10 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Repository;
-using Repository.Models;
-using Repository.Models.DataManager;
 using System;
 using System.Linq;
+using DailyPlanner.DomainClasses.Enums;
+using DailyPlanner.DomainClasses.Models;
+using DailyPlanner.Repository;
 
 
 namespace DailyPlanner.Test
@@ -20,19 +21,19 @@ namespace DailyPlanner.Test
                 new User() { Id = Guid.NewGuid(), FirstName = "Kate", LastName = "Lissa", DateOfBirth = new DateTime(1991, 10, 12), Email = "al1@r.ua", Phone = "2222222", Role = RoleEnum.Admin, Sex = false }
         }.OrderBy(p => p.FirstName).ToArray();
 
-        private readonly UserManager _userRepository;
-        public static DbContextOptions<PlannerDBContext> DbContextOptions { get; }
+        private readonly UserRepository _userRepository;
+        public static DbContextOptions<PlannerDbContext> DbContextOptions { get; }
         public static string ConnectionString = "Server=(localdb)\\MSSQLLocalDB;Database=TestPlannerDB;Trusted_Connection=True;";
         static UserTests()
         {
-            DbContextOptions = new DbContextOptionsBuilder<PlannerDBContext>()
+            DbContextOptions = new DbContextOptionsBuilder<PlannerDbContext>()
                 .UseSqlServer(ConnectionString)
                 .Options;
         }
         public UserTests()
         {
-            var context = new PlannerDBContext(DbContextOptions);
-            _userRepository = new UserManager(context);
+            var context = new PlannerDbContext(DbContextOptions);
+            _userRepository = new UserRepository(context);
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             context.Users.AddRange(users);

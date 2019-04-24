@@ -76,7 +76,7 @@ export class AddEvent extends Component {
     }
     renderRedirect() {
         if (this.state.redirect) {
-            return <Redirect to='/eventlist' component={EventList} />
+            return <Redirect to='/event/list' component={EventList} />
         }
     }
     renderCreateForm() {

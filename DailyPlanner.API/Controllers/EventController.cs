@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using DailyPlanner.DomainClasses.Interfaces;
+using DailyPlanner.DomainClasses.Models;
 using Microsoft.AspNetCore.Mvc;
-using Repository;
-using Repository.Interfaces;
-using Repository.Models;
 
 namespace DailyPlanner.API.Controllers
 {

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace Repository.Interfaces
+namespace DailyPlanner.DomainClasses.Interfaces
 {
     public interface IDataRepository<TEntity> where TEntity:class
     {

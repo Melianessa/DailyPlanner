@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using DailyPlanner.DomainClasses;
 using Microsoft.AspNetCore.Mvc;
-using Repository;
-using Repository.Interfaces;
-using Repository.Models;
+using DailyPlanner.DomainClasses.Interfaces;
+using DailyPlanner.DomainClasses.Models;
 
 namespace DailyPlanner.API.Controllers
 {
@@ -14,9 +12,9 @@ namespace DailyPlanner.API.Controllers
     public class UserController : ControllerBase
     {
         // GET api/values
-        private readonly IDataRepository<User> _iRepo;
+        private readonly IUserRepository _iRepo;
 
-        public UserController(IDataRepository<User> repo)
+        public UserController(IUserRepository repo)
         {
             _iRepo = repo;
         }
@@ -25,7 +23,11 @@ namespace DailyPlanner.API.Controllers
         {
             return _iRepo.GetAll();
         }
-
+        [HttpGet]
+        public IEnumerable<UserDTO> GetAllUsers()
+        {
+            return _iRepo.GetAllUsers();
+        }
         // GET api/values/5
         [HttpGet("{id}")]
         public User Get(Guid id)

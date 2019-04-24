@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Repository.Models;
+﻿using System.Collections.Generic;
 
-namespace Repository.Interfaces
+namespace DailyPlanner.DomainClasses.Interfaces
 {
     public interface IEventBase<TEntity> where TEntity:class
     {

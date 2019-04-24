@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Repository
+﻿namespace DailyPlanner.DomainClasses.Enums
 {
     public enum EventEnum
     {

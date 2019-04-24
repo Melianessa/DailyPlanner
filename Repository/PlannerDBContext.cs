@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DailyPlanner.DomainClasses.Models;
 using Microsoft.EntityFrameworkCore;
-using Repository.Models;
 
-namespace Repository
+namespace DailyPlanner.Repository
 {
-    public class PlannerDBContext:DbContext
+    public class PlannerDbContext:DbContext
     {
-        public PlannerDBContext(DbContextOptions opt):base(opt)
+        public PlannerDbContext(DbContextOptions opt):base(opt)
         { }
         public DbSet<Event> Events { get; set; }
         public DbSet<User> Users { get; set; }

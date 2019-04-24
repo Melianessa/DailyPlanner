@@ -3,18 +3,21 @@ import { NavLink } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./NavMenu.css";
 import "./style.css";
-import { confirmAlert } from "react-confirm-alert"; // Import
+import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
+import Pagination from "react-js-pagination";
+//import { PaginationCustom } from "./Pagination";
 
 export class UserList extends Component {
     static displayName = UserList.name;
 
     constructor(props) {
         super(props);
-        this.state = { users: [], loading: true };
+        this.state = { users: [], loading: true, activePage: 1};
         this.handleDelete = this.handleDelete.bind(this);
         this.helperDelete = this.helperDelete.bind(this);
-        fetch('api/user/getAll')
+        this.handlePageChange = this.handlePageChange.bind(this);
+        fetch('api/user/getAllUsers')
             .then(response => {
                 const json = response.json();
                 console.log(json);
@@ -25,9 +28,13 @@ export class UserList extends Component {
                     users: data, loading: false
                 });
                 console.log(this.state.users);
+
             });
     }
-
+    handlePageChange(pageNumber) {
+        console.log(`active page is ${pageNumber}`);
+        this.setState({ activePage: pageNumber });
+    }
 
     helperDelete(id) {
         fetch('api/user/delete/' + id,
@@ -76,6 +83,7 @@ export class UserList extends Component {
                         <th>Email</th>
                         <th>Sex</th>
                         <th>Role</th>
+                        <th>Event count</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -90,8 +98,9 @@ export class UserList extends Component {
                             </td>
                             <td>{u.phone}</td>
                             <td>{u.email}</td>
-                            <td>{u.sex}</td>
-                            <td>{u.role}</td>
+                            <td>{u.sex ? "Male" : "Female"}</td>
+                            <td>{u.role===1 ? "Client" : "Admin"}</td>
+                            <td>{u.eventCount}</td>
                             <td>
                                 <button className="btn btn-warning" onClick={() => this.handleEdit(u.id)}>Edit</button>
                                 <button className="btn btn-danger" onClick={() => this.handleDelete(u.id)}>Delete</button>
@@ -116,6 +125,13 @@ export class UserList extends Component {
                     <NavLink tag={Link} className="btn btn-success" to="/user/create">Create new</NavLink>
                 </div>
                 {contents}
+                <Pagination
+                    hideDisabled
+                    activePage={this.state.activePage}
+                    itemsCountPerPage={5}
+                    totalItemsCount={this.state.users.length}
+                    onChange={this.handlePageChange}
+                />
             </div>
         );
     }

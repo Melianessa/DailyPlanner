@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Repository.Interfaces
+namespace DailyPlanner.DomainClasses.Interfaces
 {
     interface IBase
     {

@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
@@ -17,7 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DailyPlanner.API\DailyPlanner.API.csproj" />
     <ProjectReference Include="..\DailyPlanner.Web\DailyPlanner.Web.csproj" />
-    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\Repository\DailyPlanner.Repository.csproj" />
   </ItemGroup>
 
 </Project>

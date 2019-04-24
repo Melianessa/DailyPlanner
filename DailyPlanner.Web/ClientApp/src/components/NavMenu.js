@@ -23,24 +23,24 @@ export class NavMenu extends Component {
                                 <Glyphicon glyph='home' /> Home
               </NavItem>
                         </LinkContainer>
-                        <LinkContainer to={'/counter'}>
-                            <NavItem>
-                                <Glyphicon glyph='apple' /> Counter
-              </NavItem>
-                        </LinkContainer>
-                        <LinkContainer to={'/user'}>
+                        <LinkContainer to={'/user/list'}>
                             <NavItem>
                                 <Glyphicon glyph='user' /> User
               </NavItem>
                         </LinkContainer>
-                        <LinkContainer to={'/eventlist'}>
+                        <LinkContainer to={'/event/list'}>
                             <NavItem>
-                                <Glyphicon glyph='th-list' /> Events
+                                <Glyphicon glyph='list-alt' /> Events
               </NavItem>
                         </LinkContainer>
-	                    <LinkContainer to={'/create'}>
+                        <LinkContainer to={'/event/create'}>
 		                    <NavItem>
-			                    <Glyphicon glyph='th-list' /> Create new event
+                                <Glyphicon glyph='plus-sign' /> Create new event
+		                    </NavItem>
+                        </LinkContainer>
+	                    <LinkContainer to={'/user/create'}>
+		                    <NavItem>
+                                <Glyphicon glyph='edit' /> Create new user
 		                    </NavItem>
 	                    </LinkContainer>
                     </Nav>

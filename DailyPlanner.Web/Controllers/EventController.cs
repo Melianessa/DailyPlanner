@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using DailyPlanner.Controllers;
+using DailyPlanner.DomainClasses.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Repository;
-using Repository.Models;
 
 namespace DailyPlanner.Web.Controllers
 {

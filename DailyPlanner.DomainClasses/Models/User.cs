@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Repository.Interfaces;
+using DailyPlanner.DomainClasses.Enums;
+using DailyPlanner.DomainClasses.Interfaces;
 
-namespace Repository.Models
+namespace DailyPlanner.DomainClasses.Models
 {
     public class User:IBase
     {

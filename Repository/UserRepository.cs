@@ -1,22 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DailyPlanner.DomainClasses;
+using DailyPlanner.DomainClasses.Interfaces;
+using DailyPlanner.DomainClasses.Models;
 using Microsoft.EntityFrameworkCore;
-using Repository.Interfaces;
+using Repository;
 
-namespace Repository.Models.DataManager
+namespace DailyPlanner.Repository
 {
-    public class UserManager : IDataRepository<User>
+    public class UserRepository : IUserRepository
     {
-        private readonly PlannerDBContext _context;
+        private readonly PlannerDbContext _context;
 
-        public UserManager(PlannerDBContext context)
+        public UserRepository(PlannerDbContext context)
         {
             _context = context;
         }
         public IEnumerable<User> GetAll()
         {
-            return _context.Users.Include(e=>e.Events).ToList();
+            return _context.Users.Include(p=>p.Events).ToList();
         }
 
         public User Get(Guid id)
@@ -57,6 +60,11 @@ namespace Repository.Models.DataManager
             }
             _context.SaveChanges();
             return _context.Users.Count();
+        }
+
+        public IEnumerable<UserDTO> GetAllUsers()
+        {
+            return _context.Users.Include(p=>p.Events).Select(p => new UserDTO(p)).ToList();
         }
     }
 }

@@ -5,12 +5,11 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using DailyPlanner.Controllers;
+using DailyPlanner.DomainClasses;
+using DailyPlanner.DomainClasses.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Repository;
-using Repository.Models;
 
 namespace DailyPlanner.Web.Controllers
 {
@@ -26,29 +25,48 @@ namespace DailyPlanner.Web.Controllers
             _logger = logger;
             _mapper = mapper;
         }
-
         [HttpGet]
-        public async Task<IEnumerable<UserDTO>> GetAll()
+        public async Task<IEnumerable<UserDTO>> GetAllUsers()
         {
             List<UserDTO> user = new List<UserDTO>();
             try
             {
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync("api/user/getAll");
-                HttpResponseMessage resEvent = await client.GetAsync("api/event/getAll");
-                if (res.IsSuccessStatusCode&& resEvent.IsSuccessStatusCode)
+                HttpResponseMessage res = await client.GetAsync("api/user/getAllUsers");
+                if (res.IsSuccessStatusCode)
                 {
                     var result = await res.Content.ReadAsStringAsync();
-                    user = JsonConvert.DeserializeObject<List<UserDTO>>(result).OrderBy(p=>p.CreationDate).ToList();
+                    user = JsonConvert.DeserializeObject<List<UserDTO>>(result).OrderBy(p => p.CreationDate).ToList();
                 }
             }
             catch (Exception e)
             {
-                _logger.LogWarning($"Error in GetAll method: {e.Message}");
+                _logger.LogWarning($"Error in GetAllUsers method: {e.Message}");
             }
 
             return user;
         }
+        //[HttpGet]
+        //public async Task<IEnumerable<User>> GetAll()
+        //{
+        //    List<User> user = new List<User>();
+        //    try
+        //    {
+        //        HttpClient client = _userAPI.InitializeClient();
+        //        HttpResponseMessage res = await client.GetAsync("api/user/getAll");
+        //        if (res.IsSuccessStatusCode)
+        //        {
+        //            var result = await res.Content.ReadAsStringAsync();
+        //            user = JsonConvert.DeserializeObject<List<User>>(result).OrderBy(p=>p.CreationDate).ToList();
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.LogWarning($"Error in GetAll method: {e.Message}");
+        //    }
+
+        //    return user;
+        //}
 
         //[HttpGet("[action]")]
         //public async Task<IActionResult> Get(Guid id)
@@ -78,9 +96,7 @@ namespace DailyPlanner.Web.Controllers
         //    return Ok();
         //}
         [HttpPost]
-        public async Task<IActionResult> Create(
-            [Bind("Id,FirstName,LastName,CreationDate,DateOfBirth,Phone,Email,Sex,IsActive,Role")]
-            User user)
+        public async Task<IActionResult> Create([FromBody]User user)
         {
             try
             {

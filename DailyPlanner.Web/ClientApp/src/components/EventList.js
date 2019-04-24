@@ -91,8 +91,7 @@ export class EventList extends Component {
             <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th>Date: <DatePicker onChange={this.handleGetAll} selected={this.state.selectedDay} />
-                        </th>
+                        <th>Date: <DatePicker onChange={this.handleGetAll} selected={this.state.selectedDay} /></th>
                         <th>Event</th>
                     </tr>
                 </thead>
@@ -103,9 +102,9 @@ export class EventList extends Component {
                                 <div>{new Date(ev.startDate).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</div>
                                 <div>{new Date(ev.endDate).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</div>
                             </td>
-                            <td>
+                            <td className="event-date-header">
                                 <div>{ev.title}</div>
-                                <div className="event-date-header">{ev.description}</div>
+                                <div>{ev.description}</div>
                             </td>
                             <td>
                                 <button className="btn btn-warning" onClick={() => this.handleEdit(ev.id)}>Edit</button>
