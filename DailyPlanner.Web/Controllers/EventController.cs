@@ -126,18 +126,18 @@ namespace DailyPlanner.Web.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Edit(Guid id)
+        public async Task<Event> Edit(Guid id)
         {
+            Event ev = new Event();
             try
             {
                 if (id == null)
                 {
                     _logger.LogWarning("In Edit method Id is NULL");
-                    return NotFound();
                 }
-                Event ev = new Event();
+
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/event/put/{id}");
+                HttpResponseMessage res = await client.GetAsync($"api/event/get/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
@@ -147,23 +147,18 @@ namespace DailyPlanner.Web.Controllers
                 if (ev == null)
                 {
                     _logger.LogWarning("Error in Edit method, event is NULL");
-                    return NotFound();
                 }
-
-                return Ok(ev);
+                return ev;
             }
             catch (Exception e)
             {
                 _logger.LogWarning($"Error in Edit method: {e.Message}");
             }
-
-            return Ok();
+            return ev;
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(Guid id,
-            [Bind("Id,Title,Description,CreationDate,StartDate,EndDate,Type,UserId,IsActive")]
-            Event ev)
+        public async Task<IActionResult> Edit(Guid id, [FromBody]Event ev)
         {
             try
             {

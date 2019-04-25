@@ -20,14 +20,11 @@ export class UserList extends Component {
         fetch('api/user/getAllUsers')
             .then(response => {
                 const json = response.json();
-                console.log(json);
                 return json;
             }).then(data => {
-                console.log(data);
                 this.setState({
                     users: data, loading: false
                 });
-                console.log(this.state.users);
 
             });
     }

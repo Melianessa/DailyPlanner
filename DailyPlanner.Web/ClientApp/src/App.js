@@ -6,6 +6,7 @@ import { EventList } from './components/EventList';
 import { AddEvent } from "./components/AddEvent";
 import { UserList } from "./components/UserList";
 import { AddUser } from "./components/AddUser";
+import { EditEvent } from "./components/EditEvent";
 
 
 export default class App extends Component {
@@ -19,6 +20,7 @@ export default class App extends Component {
                 <Route path='/event/create' component={AddEvent} />
                 <Route path='/user/create' component={AddUser} />
                 <Route path='/user/list' component={UserList} />
+                <Route path='/event/edit/:id' component={EditEvent} />
                 </Layout>
         );
     }

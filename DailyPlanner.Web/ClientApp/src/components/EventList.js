@@ -1,5 +1,6 @@
 ﻿import React, { Component } from "react";
 import { NavLink } from "reactstrap";
+import { Router, Route } from 'react-router';
 import { Link } from "react-router-dom";
 import "./NavMenu.css";
 import "./style.css";
@@ -7,6 +8,7 @@ import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
+
 
 export class EventList extends Component {
     static displayName = EventList.name;
@@ -20,6 +22,7 @@ export class EventList extends Component {
         this.handleDayClick = this.handleDayClick.bind(this);
         this.handleGetAll = this.handleGetAll.bind(this);
         this.handleGetAll(new Date());
+        
     }
     handleGetAll(day) {
         let reqBody = { date: day.toLocaleDateString("en-US") };
@@ -37,18 +40,15 @@ export class EventList extends Component {
             console.log(json);
             return json;
         }).then(data => {
-            console.log(data);
             this.handleDayClick(day);
             this.setState({
                 events: data, loading: false
             });
-            console.log(this.state.events);
         });
     }
 
     handleDayClick(day) {
         this.setState({ selectedDay: day });
-        console.log(this.state.selectedDay);
     }
     helperDelete(id) {
         fetch('api/event/delete/' + id,
@@ -82,9 +82,13 @@ export class EventList extends Component {
         });
     }
 
-
     handleEdit(id) {
-        this.props.history.push('api/event/update/' + { id });
+        //this.props.match.params.id = id;
+        //history.push('api/event/edit/' + id);
+        //return <Route path="/event/edit/:id" component={EditEvent} />;
+        this.props.match.params.id = id;
+        this.props.history.push('/event/edit/' + id);
+        
     }
     renderEvent(events) {
         return (
@@ -107,7 +111,7 @@ export class EventList extends Component {
                                 <div>{ev.description}</div>
                             </td>
                             <td>
-                                <button className="btn btn-warning" onClick={() => this.handleEdit(ev.id)}>Edit</button>
+	                            <button className="btn btn-warning" onClick={() => this.handleEdit(ev.id)}>Edit</button>
                                 <button className="btn btn-danger" onClick={() => this.handleDelete(ev.id)}>Delete</button>
                             </td>
                         </tr>
