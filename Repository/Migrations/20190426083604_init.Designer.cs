@@ -6,23 +6,22 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Repository;
 
-namespace Repository.Migrations
+namespace DailyPlanner.Repository.Migrations
 {
     [DbContext(typeof(PlannerDbContext))]
-    [Migration("20190421194432_init")]
+    [Migration("20190426083604_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
+                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Repository.Event", b =>
+            modelBuilder.Entity("DailyPlanner.DomainClasses.Models.Event", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -38,8 +37,7 @@ namespace Repository.Migrations
                     b.Property<DateTime>("StartDate");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .IsRequired();
 
                     b.Property<int>("Type");
 
@@ -52,7 +50,7 @@ namespace Repository.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Repository.Models.User", b =>
+            modelBuilder.Entity("DailyPlanner.DomainClasses.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -63,13 +61,11 @@ namespace Repository.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("varchar(20)");
+                    b.Property<string>("FirstName");
 
                     b.Property<bool>("IsActive");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("varchar(40)");
+                    b.Property<string>("LastName");
 
                     b.Property<string>("Phone");
 
@@ -82,9 +78,9 @@ namespace Repository.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Repository.Event", b =>
+            modelBuilder.Entity("DailyPlanner.DomainClasses.Models.Event", b =>
                 {
-                    b.HasOne("Repository.Models.User", "User")
+                    b.HasOne("DailyPlanner.DomainClasses.Models.User", "User")
                         .WithMany("Events")
                         .HasForeignKey("UserId");
                 });

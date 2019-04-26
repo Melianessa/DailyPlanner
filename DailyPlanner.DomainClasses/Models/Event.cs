@@ -16,7 +16,6 @@ namespace DailyPlanner.DomainClasses.Models
         }
         [Key]
         public Guid Id { get; set; }
-        [Column(TypeName = "varchar(20)")]
         [Required]
         public string Title { get; set; }
         public string Description { get; set; }

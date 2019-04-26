@@ -13,7 +13,7 @@ export class UserList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { users: [], loading: true, activePage: 1};
+        this.state = { users: [], loading: true, activePage: 1 };
         this.handleDelete = this.handleDelete.bind(this);
         this.helperDelete = this.helperDelete.bind(this);
         this.handlePageChange = this.handlePageChange.bind(this);
@@ -66,7 +66,8 @@ export class UserList extends Component {
     }
 
     handleEdit(id) {
-        this.props.history.push('api/user/update/' + { id });
+	    this.props.match.params.id = id;
+	    this.props.history.push('/user/edit/' + id);
     }
     renderUser(users) {
         return (
@@ -96,7 +97,7 @@ export class UserList extends Component {
                             <td>{u.phone}</td>
                             <td>{u.email}</td>
                             <td>{u.sex ? "Male" : "Female"}</td>
-                            <td>{u.role===1 ? "Client" : "Admin"}</td>
+                            <td>{u.role === 1 ? "Client" : "Admin"}</td>
                             <td>{u.eventCount}</td>
                             <td>
                                 <button className="btn btn-warning" onClick={() => this.handleEdit(u.id)}>Edit</button>

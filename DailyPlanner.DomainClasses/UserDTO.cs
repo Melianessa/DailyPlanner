@@ -18,7 +18,7 @@ namespace DailyPlanner.DomainClasses
             Sex = user.Sex;
             IsActive = user.IsActive;
             Role = user.Role;
-            EventCount = user.Events.Count;
+            EventCount = user.Events?.Count ?? 0;
         }
         public UserDTO() { }
 

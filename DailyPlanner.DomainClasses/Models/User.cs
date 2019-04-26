@@ -17,9 +17,7 @@ namespace DailyPlanner.DomainClasses.Models
         }
         [Key]
         public Guid Id { get; set; }
-        [Column(TypeName = "varchar(20)")]
         public string FirstName { get; set; }
-        [Column(TypeName = "varchar(40)")]
         public string LastName { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime DateOfBirth { get; set; }

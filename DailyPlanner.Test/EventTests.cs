@@ -1,7 +1,6 @@
 ﻿using DailyPlanner.API.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Repository;
 using System;
 using System.Globalization;
 using System.Linq;

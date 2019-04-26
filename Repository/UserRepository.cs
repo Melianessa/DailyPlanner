@@ -5,7 +5,6 @@ using DailyPlanner.DomainClasses;
 using DailyPlanner.DomainClasses.Interfaces;
 using DailyPlanner.DomainClasses.Models;
 using Microsoft.EntityFrameworkCore;
-using Repository;
 
 namespace DailyPlanner.Repository
 {
@@ -19,7 +18,7 @@ namespace DailyPlanner.Repository
         }
         public IEnumerable<User> GetAll()
         {
-            return _context.Users.Include(p=>p.Events).ToList();
+            return _context.Users.Include(p => p.Events).ToList();
         }
 
         public User Get(Guid id)
@@ -35,9 +34,9 @@ namespace DailyPlanner.Repository
             return b.Id;
         }
 
-        public User Update(Guid id, User b)
+        public User Update(User b)
         {
-            var user = _context.Users.Find(id);
+            var user = _context.Users.Find(b.Id);
             if (user != null)
             {
                 user.FirstName = b.FirstName;
@@ -64,7 +63,11 @@ namespace DailyPlanner.Repository
 
         public IEnumerable<UserDTO> GetAllUsers()
         {
-            return _context.Users.Include(p=>p.Events).Select(p => new UserDTO(p)).ToList();
+            return _context.Users.Include(p => p.Events).Select(p => new UserDTO(p)).ToList();
+        }
+        public UserDTO GetUser(Guid id)
+        {
+            return _context.Users.Include(p => p.Events).Select(p => new UserDTO(p)).FirstOrDefault(p => p.Id == id);
         }
     }
 }

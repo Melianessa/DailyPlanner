@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using DailyPlanner.DomainClasses.Interfaces;
 using DailyPlanner.DomainClasses.Models;
-using DailyPlanner.Repository;
 
-namespace Repository
+namespace DailyPlanner.Repository
 {
     public class EventRepository : IDataRepository<Event>, IEventBase<Event>
     {
@@ -42,9 +41,9 @@ namespace Repository
             return b.Id;
         }
 
-        public Event Update(Guid id, Event b)
+        public Event Update(Event b)
         {
-            var ev = _context.Events.Find(id);
+            var ev = _context.Events.Find(b.Id);
             if (ev != null)
             {
                 ev.Title = b.Title;

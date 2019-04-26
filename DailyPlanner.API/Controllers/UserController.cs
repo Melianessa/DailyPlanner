@@ -29,10 +29,15 @@ namespace DailyPlanner.API.Controllers
             return _iRepo.GetAllUsers();
         }
         // GET api/values/5
+        //[HttpGet("{id}")]
+        //public User Get(Guid id)
+        //{
+        //    return _iRepo.Get(id);
+        //}
         [HttpGet("{id}")]
-        public User Get(Guid id)
+        public UserDTO GetUser(Guid id)
         {
-            return _iRepo.Get(id);
+            return _iRepo.GetUser(id);
         }
 
         // POST api/values
@@ -44,9 +49,9 @@ namespace DailyPlanner.API.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public User Put(Guid id, [FromBody] User user)
+        public User Put([FromBody] User user)
         {
-            return _iRepo.Update(id,user);
+            return _iRepo.Update(user);
         }
 
         // DELETE api/values/5

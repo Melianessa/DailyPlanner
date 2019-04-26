@@ -16,14 +16,13 @@ export class EventList extends Component {
     constructor(props) {
         super(props);
         let date = new Date();
-        this.state = { events: [], loading: true, selectedDay: date };
+        this.state = { events: [], loading: true, selectedDay: date, offset: new Date().getTimezoneOffset()};
         this.handleDelete = this.handleDelete.bind(this);
         this.helperDelete = this.helperDelete.bind(this);
         this.handleDayClick = this.handleDayClick.bind(this);
         this.handleGetAll = this.handleGetAll.bind(this);
         this.handleGetAll(new Date());
-        
-    }
+        }
     handleGetAll(day) {
         let reqBody = { date: day.toLocaleDateString("en-US") };
         fetch('api/event/getByDate', {
@@ -41,10 +40,19 @@ export class EventList extends Component {
             return json;
         }).then(data => {
             this.handleDayClick(day);
+            for (var i = 0; i < data.length; i++) {
+	            let startMinutes = new Date(data[i].startDate).setMinutes(new Date(data[i].startDate).getMinutes() -
+		            this.state.offset);
+	            let endMinutes = new Date(data[i].endDate).setMinutes(new Date(data[i].endDate).getMinutes() -
+		            this.state.offset);
+	            data[i].startDate = new Date(startMinutes).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+	            data[i].endDate = new Date(endMinutes).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+	            }
             this.setState({
                 events: data, loading: false
             });
-        });
+            });
+        
     }
 
     handleDayClick(day) {
@@ -103,8 +111,8 @@ export class EventList extends Component {
                     {events.map(ev =>
                         <tr key={ev.id}>
                             <td className="event-date-header">
-                                <div>{new Date(ev.startDate).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</div>
-                                <div>{new Date(ev.endDate).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</div>
+                                <div>{ev.startDate}</div>
+                                <div>{ev.endDate}</div>
                             </td>
                             <td className="event-date-header">
                                 <div>{ev.title}</div>

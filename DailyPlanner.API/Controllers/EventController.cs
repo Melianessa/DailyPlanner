@@ -48,9 +48,9 @@ namespace DailyPlanner.API.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public Event Put(Guid id, [FromBody] Event ev)
+        public Event Put([FromBody] Event ev)
         {
-            return _iRepo.Update(id, ev);
+            return _iRepo.Update(ev);
         }
 
         // DELETE api/values/5

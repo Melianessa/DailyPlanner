@@ -8,5 +8,6 @@ namespace DailyPlanner.DomainClasses.Interfaces
     public interface IUserRepository : IDataRepository<User>
     {
         IEnumerable<UserDTO> GetAllUsers();
+        UserDTO GetUser(Guid id);
     }
 }

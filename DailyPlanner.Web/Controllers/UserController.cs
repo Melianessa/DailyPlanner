@@ -68,32 +68,30 @@ namespace DailyPlanner.Web.Controllers
         //    return user;
         //}
 
-        //[HttpGet("[action]")]
-        //public async Task<IActionResult> Get(Guid id)
+        //[HttpGet("{id}")]
+        //public async Task<User> Get(Guid id)
         //{
-        //    List<User> users = new List<User>();
+        //    User users = new User();
         //    try
         //    {
         //        HttpClient client = _userAPI.InitializeClient();
-        //        HttpResponseMessage res = await client.GetAsync($"api/user/{id}");
+        //        HttpResponseMessage res = await client.GetAsync($"api/user/get/{id}");
         //        if (res.IsSuccessStatusCode)
         //        {
         //            var result = res.Content.ReadAsStringAsync().Result;
-        //            users = JsonConvert.DeserializeObject<List<User>>(result);
+        //            users = JsonConvert.DeserializeObject<User>(result);
         //        }
-        //        var user = users.SingleOrDefault(m => m.Id == id);
-        //        if (user == null)
+        //        if (users == null)
         //        {
         //            _logger.LogWarning("Error in Get method, user is NULL");
-        //            return NotFound();
-        //        }
-        //        return Ok(user);
+        //            }
+        //        return users;
         //    }
         //    catch (Exception e)
         //    {
         //        _logger.LogWarning($"Error in Get method: {e.Message}");
         //    }
-        //    return Ok();
+        //    return users;
         //}
         [HttpPost]
         public async Task<IActionResult> Create([FromBody]User user)
@@ -108,7 +106,7 @@ namespace DailyPlanner.Web.Controllers
                     HttpResponseMessage res = await client.PostAsync("api/user/post", content);
                     if (res.IsSuccessStatusCode)
                     {
-                        return RedirectToAction("GetAll");
+                        return RedirectToAction("GetAllUsers");
                     }
                 }
             }
@@ -120,65 +118,76 @@ namespace DailyPlanner.Web.Controllers
             return Ok(user);
         }
 
+        //[HttpGet("{id}")]
+        //public async Task<User> Edit(Guid id)
+        //{
+        //    User user = new User();
+        //    try
+        //    {
+        //        if (id == null)
+        //        {
+        //            _logger.LogWarning("In Edit method Id is NULL");
+        //        }
+        //        HttpClient client = _userAPI.InitializeClient();
+        //        HttpResponseMessage res = await client.GetAsync($"api/user/get/{id}");
+
+        //        if (res.IsSuccessStatusCode)
+        //        {
+        //            var result = await res.Content.ReadAsStringAsync();
+        //            user = JsonConvert.DeserializeObject<User>(result);
+        //        }
+
+        //        return user;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.LogWarning($"Error in Edit method: {e.Message}");
+        //    }
+        //    return user;
+        //}
         [HttpGet("{id}")]
-        public async Task<IActionResult> Edit(Guid id)
+        public async Task<UserDTO> Edit(Guid id)
         {
+            UserDTO user = new UserDTO();
             try
             {
                 if (id == null)
                 {
                     _logger.LogWarning("In Edit method Id is NULL");
-                    return NotFound();
                 }
-
-                List<User> users = new List<User>();
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/user/put/{id}");
+                HttpResponseMessage res = await client.GetAsync($"api/user/getUser/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
-                    var result = res.Content.ReadAsStringAsync().Result;
-                    users = JsonConvert.DeserializeObject<List<User>>(result);
+                    var result = await res.Content.ReadAsStringAsync();
+                    user = JsonConvert.DeserializeObject<UserDTO>(result);
                 }
 
-                var user = users.SingleOrDefault(m => m.Id == id);
-                if (user == null)
-                {
-                    return NotFound();
-                }
-
-                return Ok(user);
+                return user;
             }
             catch (Exception e)
             {
                 _logger.LogWarning($"Error in Edit method: {e.Message}");
             }
-
-            return Ok();
+            return user;
         }
-
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(Guid id,
-            [Bind("Id,FirstName,LastName,CreationDate,DateOfBirth,Phone,Email,Sex,IsActive,Role")]
-            User user)
+        public async Task<User> Edit([FromBody]User user)
         {
+            User newUser = new User();
             try
             {
-                if (id != user.Id)
-                {
-                    _logger.LogInformation("In Edit method IDs don't match");
-                    return NotFound();
-                }
-
                 if (ModelState.IsValid)
                 {
                     HttpClient client = _userAPI.InitializeClient();
 
                     var content = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
-                    HttpResponseMessage res = await client.PutAsync($"api/user/put/{id}", content);
+                    HttpResponseMessage res = await client.PutAsync($"api/user/put/{user.Id}", content);
                     if (res.IsSuccessStatusCode)
                     {
-                        return RedirectToAction("GetAll");
+                        var result = await res.Content.ReadAsStringAsync();
+                        newUser = JsonConvert.DeserializeObject<User>(result);
                     }
                 }
             }
@@ -186,7 +195,7 @@ namespace DailyPlanner.Web.Controllers
             {
                 _logger.LogWarning($"Error in Edit method: {e.Message}");
             }
-            return Ok(user);
+            return newUser;
         }
 
         [HttpDelete("{id}")]
@@ -217,9 +226,9 @@ namespace DailyPlanner.Web.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogWarning($"Error in Delte method: {e.Message}");
+                _logger.LogWarning($"Error in Delete method: {e.Message}");
             }
             return Ok();
         }
-        }
+    }
 }
