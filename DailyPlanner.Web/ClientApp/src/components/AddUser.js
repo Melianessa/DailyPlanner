@@ -69,7 +69,7 @@ export class AddUser extends Component {
             Sex: this.state.selectedSex,
             Role: this.state.selectedRole
         }
-        this.setState({ redirect: true });
+
         fetch('api/user/create',
             {
                 method: "POST",
@@ -78,104 +78,101 @@ export class AddUser extends Component {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(body)
-            });
+            }).then(NotificationManager.success('Success message', 'User successfully added!', 1000000))
+            .then(this.setState({ redirect: true }));
     }
-    handleSubmit() {
-        NotificationManager.success('Success message', 'User successfully added!', 1000000);
-    }
+
     renderRedirect() {
         if (this.state.redirect) {
-            return <Redirect to='/user/list' component={UserList} />
+            return <Redirect to='/user/list' component={UserList} />;
         }
     }
     renderCreateForm() {
-        return <form onSubmit={this.handleSubmit.bind()}>
-            <div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">First Name:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="text"
-                            value={this.state.firstName}
-                            onChange={this.handleChangeFName}
-                            placeholder="Write the first name..." />
-                    </div>
+        return <div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">First Name:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="text"
+                        value={this.state.firstName}
+                        onChange={this.handleChangeFName}
+                        placeholder="Write the first name..." />
                 </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Last Name:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="text"
-                            value={this.state.lastName}
-                            onChange={this.handleChangeLName}
-                            placeholder="Write the last name..." />
-                    </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Last Name:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="text"
+                        value={this.state.lastName}
+                        onChange={this.handleChangeLName}
+                        placeholder="Write the last name..." />
                 </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Date of birth: </label>
-                    <div className="col-md-4">
-                        <DatePicker className="form-control"
-                            selected={this.state.dateOfBirth}
-                            onChange={this.handleChangeDate}
-                            showYearDropdown
-                            scrollableYearDropdown
-                            yearDropdownItemNumber={15}
-                            showMonthDropdown
-                        />
-                    </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Date of birth: </label>
+                <div className="col-md-4">
+                    <DatePicker className="form-control"
+                        selected={this.state.dateOfBirth}
+                        onChange={this.handleChangeDate}
+                        showYearDropdown
+                        scrollableYearDropdown
+                        yearDropdownItemNumber={15}
+                        showMonthDropdown
+                    />
                 </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Phone:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="phone"
-                            value={this.state.phone}
-                            onChange={this.handleChangePhone}
-                            placeholder="Write the phone number..." />
-                    </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Phone:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="phone"
+                        value={this.state.phone}
+                        onChange={this.handleChangePhone}
+                        placeholder="Write the phone number..." />
                 </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Email:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="email"
-                            value={this.state.email}
-                            onChange={this.handleChangeEmail}
-                            placeholder="Write the email..." />
-                    </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Email:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="email"
+                        value={this.state.email}
+                        onChange={this.handleChangeEmail}
+                        placeholder="Write the email..." />
                 </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Sex: </label>
-                    <div className="col-md-4">
-                        <select className="form-control" value={this.state.selectedSex} onChange={this.handleChangeSex} >
-                            <option value="">-- Select sex --</option>
-                            {this.state.sex.map(p =>
-                                <option key={p.name} value={p.value}>{p.name}</option>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Sex: </label>
+                <div className="col-md-4">
+                    <select className="form-control" value={this.state.selectedSex} onChange={this.handleChangeSex
+                    } >
+                        <option value="">-- Select sex --</option>
+                        {this.state.sex.map(p =>
+                            <option key={p.name} value={p.value}>{p.name}</option>
+                        )}
+                    </select>
+                </div>
+            </div >
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Role: </label>
+                <div className="col-md-4">
+                    <select className="form-control" value={this.state.selectedRole} onChange={this
+                        .handleChangeRole} >
+                        <option value="">-- Select role --</option>
+                        {this.state.role.map(p =>
+                            <option key={p.name} value={p.value}>{p.name}</option>
+                        )}
+                    </select>
+                </div>
+            </div >
 
-                            )}
-                        </select>
-                    </div>
-                </div >
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Role: </label>
-                    <div className="col-md-4">
-                        <select className="form-control" value={this.state.selectedRole} onChange={this.handleChangeRole} >
-                            <option value="">-- Select role --</option>
-                            {this.state.role.map(p =>
-                                <option key={p.name} value={p.value}>{p.name}</option>
-
-                            )}
-                        </select>
-                    </div>
-                </div >
-
-                <div className="form-group">
-                    <button className="btn btn-success" onClick={this.handleClick}>Save user</button>
-                </div>
-                {this.renderRedirect()}
+            <div className="form-group">
+                <button className="btn btn-success" onClick={this.handleClick}>Save user</button>
             </div>
             <NotificationContainer />
-        </form>
+            {this.renderRedirect()}
+        </div>;
     }
     render() {
         let contents = this.state.loading

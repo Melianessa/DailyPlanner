@@ -29982,3 +29982,1250 @@ Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (
 Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
 Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 51.1776ms
 Request finished in 67.8749ms 200 application/json; charset=utf-8
+Starting create-react-app server on port 59430...
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Failed to compile.
+
+
+./src/components/EventList.js
+
+Request finished in 30225.9755ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Module not found: Can't resolve 'react-datepicker' in 'C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\src\components'
+Compiling...
+
+Failed to compile.
+
+
+./src/components/EditEvent.js
+
+Request finished in 9641.0729ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 360.6338ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 348.4186ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297032484  
+Request finished in 34.3863ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/765/f50dnjav/websocket  
+Request finished in 51.7196ms 304 
+Request finished in 78561.9857ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Request finished in 1185.2021ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 22.8815ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 17.3102ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297119238  
+Request finished in 5.768ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/232/epfgez1g/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 9.1681ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js.map  
+Request finished in 24.8981ms 304 
+Request finished in 1516.6182ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/232/cisqcsks/xhr_streaming?t=1556297121352  0
+Module not found: Can't resolve 'react-datepicker' in 'C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\src\components'
+Compiling...
+
+Request starting HTTP/1.1 GET http://localhost:51884/  
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request finished in 4890.2279ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 403.0883ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 16.2441ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297179700  
+Request finished in 3.4781ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/366/vgw2utq4/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:51884/favicon.ico  
+Request finished in 7.7487ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/366/ne55akx2/xhr_streaming?t=1556297180911  0
+Request finished in 1345.7185ms 101 
+Request finished in 1429.6192ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4764.9815ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 5132.2066ms
+Request finished in 5220.7655ms 200 application/json; charset=utf-8
+Request finished in 75608.3622ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/user/create application/json 139
+Route matched with {action = "Create", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web)
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executing action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 56.0358ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 75.4191ms
+Request finished in 93.5453ms 200 application/json; charset=utf-8
+Executed action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 351.9825ms.
+Executing RedirectResult, redirecting to /api/User/GetAllUsers.
+Executed action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) in 449.6524ms
+Request finished in 497.5254ms 302 
+Request starting HTTP/1.1 GET http://localhost:51884/api/User/GetAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 28.4188ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 33.5236ms
+Request finished in 38.3242ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/x-www-form-urlencoded 18
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (4/26/2019) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 140.6442ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.Models.Event, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 162.199ms
+Request finished in 184.1429ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.7832ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 14.7285ms
+Request finished in 18.3829ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/b775de38-88b8-49c2-ba6a-cdffb9d53fe1  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (b775de38-88b8-49c2-ba6a-cdffb9d53fe1) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 202.9604ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 218.1977ms
+Request finished in 244.0452ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 157
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 21.2517ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 32.4687ms
+Request finished in 48.3856ms 200 application/json; charset=utf-8
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 143.0169ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 160.7327ms
+Request finished in 192.1061ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/x-www-form-urlencoded 18
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (4/26/2019) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.1495ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.Models.Event, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 17.965ms
+Request finished in 30.8303ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.2674ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 18.3098ms
+Request finished in 23.8013ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/x-www-form-urlencoded 18
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (4/26/2019) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.1835ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.Models.Event, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 21.4516ms
+Request finished in 34.9004ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12.972ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 16.997ms
+Request finished in 21.4184ms 200 application/json; charset=utf-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/bd052355e13d6ab2c049.hot-update.json  
+Request finished in 1010.4011ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.bd052355e13d6ab2c049.hot-update.js  
+Request finished in 5.369ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 11.484ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 351.9871ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 23.5049ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 34.3662ms
+Request finished in 45.383ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 4.3054ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297341419  
+Request finished in 4.758ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/299/0ztd51iw/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 4.4224ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/299/22ozr2dl/xhr_streaming?t=1556297342622  0
+Request finished in 1366.6435ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/b775de38-88b8-49c2-ba6a-cdffb9d53fe1  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (b775de38-88b8-49c2-ba6a-cdffb9d53fe1) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.8394ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 25.4061ms
+Request finished in 45.955ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 159
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 26.5275ms.
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 104.3525ms.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 32.4507ms
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 115.499ms
+An unhandled exception has occurred while executing the request.
+An unhandled exception has occurred while executing the request.
+Request finished in 282.632ms 500 text/html; charset=utf-8
+Request finished in 199.0496ms 500 text/html; charset=utf-8
+Request finished in 175010.5631ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/event/getByDate application/x-www-form-urlencoded 18
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (4/26/2019) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.4297ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.Models.Event, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 24.0848ms
+Request finished in 32.5956ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12.5597ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 21.5358ms
+Request finished in 27.4494ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 24.7143ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 30.0402ms
+Request finished in 47.2058ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 150
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 84.6952ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 111.4802ms
+Request finished in 133.8497ms 200 application/json; charset=utf-8
+Connection processing ended abnormally.
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/c3163e40726df6c9d9d1.hot-update.json  
+Request finished in 1008.2554ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.c3163e40726df6c9d9d1.hot-update.js  
+Request finished in 8.895ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 6.8455ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 291.1388ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 21.9683ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 36.9152ms
+Request finished in 45.681ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 3.6881ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297414443  
+Request finished in 4.982ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/772/q5hpd0kd/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 5.752ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/772/t10cxjei/xhr_streaming?t=1556297415505  0
+Request finished in 1238.2411ms 101 
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 21.1295ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 47.0645ms
+Request finished in 57.8944ms 200 application/json; charset=utf-8
+Request finished in 75050.2932ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 151
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.0276ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 25.0044ms
+Request finished in 31.5969ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 56.5927ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 76.9652ms
+Request finished in 82.1884ms 200 application/json; charset=utf-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/14aab7fb44b87de5afe8.hot-update.json  
+Request finished in 1010.0172ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.14aab7fb44b87de5afe8.hot-update.js  
+Request finished in 5.5835ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 3.9989ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 289.3563ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.4479ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 20.4473ms
+Request finished in 25.5786ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 5.0317ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 4.1926ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297757345  
+Request finished in 3.1218ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/604/cl31mhjo/websocket  
+Request finished in 350010.725ms 200 application/javascript; charset=UTF-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/e2c100c6de11e519c972.hot-update.json  
+Request finished in 1008.5214ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.e2c100c6de11e519c972.hot-update.js  
+Request finished in 7.2611ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 5.3359ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 66878.2186ms 101 
+Request finished in 381.2529ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.8829ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 20.8695ms
+Request finished in 25.3624ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 3.4201ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297825450  
+Request finished in 3.6975ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/492/neoqovpy/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 5.4136ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/492/ym3u4tdk/xhr_streaming?t=1556297826402  0
+Request finished in 1171.1359ms 101 
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/fa3fc2c041a65ef77eb2.hot-update.json  
+Request finished in 1020.5178ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.fa3fc2c041a65ef77eb2.hot-update.js  
+Request finished in 6.2619ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 7.0284ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 340.8952ms 200 application/javascript; charset=UTF-8
+Request finished in 150008.251ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.5997ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 18.6098ms
+Request finished in 22.5082ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 5.4892ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556297976854  
+Request finished in 4.7335ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/590/xdljr10l/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 3.5265ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/590/4uonkadc/xhr_streaming?t=1556297977658  0
+Request finished in 1131.3601ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/user/create application/json 140
+Route matched with {action = "Create", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 22.0196ms.
+Executing RedirectResult, redirecting to /api/User/GetAllUsers.
+Executed action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) in 40.4354ms
+Request finished in 50.3502ms 302 
+Request starting HTTP/1.1 GET http://localhost:51884/api/User/GetAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 23.1039ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 28.534ms
+Request finished in 34.4624ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:51884/api/user/create application/json 150
+Route matched with {action = "Create", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/user/create?  
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/notification.651771e1.woff  
+Executed action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 112.8702ms.
+Executing RedirectResult, redirecting to /api/User/GetAllUsers.
+Executed action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) in 122.3242ms
+Request finished in 129.8142ms 302 
+Request starting HTTP/1.1 GET http://localhost:51884/api/User/GetAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.0162ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 21.2436ms
+Request finished in 31.5525ms 200 application/json; charset=utf-8
+Request finished in 1018.0488ms 200 font/woff; charset=UTF-8
+Request finished in 1025.2863ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 20.3084ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 3.8787ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556298008807  
+Request finished in 3.0083ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/317/kc2s3kqw/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 4.5561ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/317/avv1lkk0/xhr_streaming?t=1556298009584  0
+Request finished in 1113.1931ms 101 
+Request finished in 50006.1682ms 200 application/javascript; charset=UTF-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/cb5d734c4e979326c9bd.hot-update.json  
+Request finished in 1014.4402ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.cb5d734c4e979326c9bd.hot-update.js  
+Request finished in 5.2809ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/create?  
+Request finished in 5.3901ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 309.2083ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 4.0898ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556298247346  
+Request finished in 2.9845ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/423/vca2dvqy/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 3.7259ms 304 
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Request finished in 240081.053ms 200 application/javascript; charset=UTF-8
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/6ed7bee1ad3909f9ac8f.hot-update.json  
+Request finished in 4.0224ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.6ed7bee1ad3909f9ac8f.hot-update.js  
+Request finished in 5.7357ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/create?  
+Request finished in 7.2421ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 5184.4301ms 101 
+Request finished in 353.4126ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 3.4822ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556298254355  
+Request finished in 3.2087ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/441/gnym5pmv/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 4.39ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/api/user/create application/json 148
+Route matched with {action = "Create", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 38.4079ms.
+Executing RedirectResult, redirecting to /api/User/GetAllUsers.
+Executed action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) in 44.3301ms
+Request finished in 51.337ms 302 
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/api/User/GetAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/notification.651771e1.woff  
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 1.8893ms
+An unhandled exception has occurred while executing the request.
+Request finished in 30.1041ms 500 text/html; charset=utf-8
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 52.4916ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 63.2394ms
+Request finished in 69.4737ms 200 application/json; charset=utf-8
+Request finished in 1010.5997ms 304 
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/8352e5a462e04e537dc7.hot-update.json  
+Request finished in 1006.5549ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.8352e5a462e04e537dc7.hot-update.js  
+Request finished in 4.5557ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 6.9567ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 142864.0219ms 101 
+Request finished in 297.3894ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 3.5656ms 304 
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 65.8947ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 69.8271ms
+Request finished in 79.6508ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556298398251  
+Request finished in 4.9611ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/263/qerl2prk/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 4.7481ms 304 
+Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/263/v3u0t2sc/xhr_streaming?t=1556298399110  0
+Request finished in 1114.4193ms 101 
+Request starting HTTP/1.1 POST http://localhost:51884/api/user/create application/json 154
+Route matched with {action = "Create", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/notification.651771e1.woff  
+Executed action method DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 99.4822ms.
+Executing RedirectResult, redirecting to /api/User/GetAllUsers.
+Executed action DailyPlanner.Web.Controllers.UserController.Create (DailyPlanner.Web) in 109.3423ms
+Request finished in 115.462ms 302 
+Request starting HTTP/1.1 GET http://localhost:51884/api/User/GetAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 50.5656ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 60.3813ms
+ConnectionDispatcher.Execute() 0HLMACP23VKOS
+Request finished in 79.1444ms 200 application/json; charset=utf-8
+Request finished in 1008.3724ms 304 
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/83db05fa1a7bb29b06a4.hot-update.json  
+Request finished in 1031.3681ms 200 application/json; charset=UTF-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/8763e3ded58813e3f044.hot-update.json  
+Request finished in 1015.3086ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.8763e3ded58813e3f044.hot-update.js  
+Request finished in 5.8762ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 17.1603ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 421.2295ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 21.4843ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556302287940  
+Request finished in 15.2678ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 12.4268ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/531/o0pu5zj1/websocket  
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2124.9927ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 2141.6632ms
+Request finished in 2153.9334ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 26.6642ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 33.3219ms
+Request finished in 50.5657ms 200 application/json; charset=utf-8
+Request finished in 3900048.0465ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 153
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/notification.651771e1.woff  
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 46.6006ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 60.5196ms
+Request finished in 70.7537ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 53.8144ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 58.6755ms
+Request finished in 65.0802ms 200 application/json; charset=utf-8
+Request finished in 1011.8331ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 27.1858ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 31.103ms
+Request finished in 40.937ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 153
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.415ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 18.8893ms
+Request finished in 24.6893ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.5467ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 18.702ms
+Request finished in 39.3876ms 200 application/json; charset=utf-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/7d760581d7a5e2cc6402.hot-update.json  
+Request finished in 1006.2251ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/0.7d760581d7a5e2cc6402.hot-update.js  
+Request finished in 6.3113ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Request finished in 5.3154ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 49387.2052ms 101 
+Request finished in 352.7621ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 34.8295ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 41.1346ms
+Request finished in 47.2382ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 14.3407ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556302338809  
+Request finished in 3.5664ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/761/fazd2j3p/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 5.0999ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 65.8921ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 75.5558ms
+Request finished in 118.0774ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 149
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/notification.651771e1.woff  
+Request finished in 3.365ms 304 
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 31.4985ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 44.717ms
+Request finished in 54.9585ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 34.9223ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 42.9843ms
+Request finished in 49.4789ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.1524ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 22.1974ms
+Request finished in 30.1581ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 149
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.4199ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 20.2195ms
+Request finished in 27.2772ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.4304ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 20.6712ms
+Request finished in 32.2355ms 200 application/json; charset=utf-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request starting HTTP/1.1 GET http://localhost:51884/dc6fab19a80b14a9ddfb.hot-update.json  
+Request finished in 1007.0068ms 200 application/json; charset=UTF-8
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'EventList' is defined but never used            no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/EditUser.js
+  Line 2:   'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 2:   'Router' is defined but never used               no-unused-vars
+  Line 2:   'Route' is defined but never used                no-unused-vars
+  Line 3:   'NavLink' is defined but never used              no-unused-vars
+  Line 4:   'Link' is defined but never used                 no-unused-vars
+  Line 4:   'Redirect' is defined but never used             no-unused-vars
+  Line 9:   'UserList' is defined but never used             no-unused-vars
+  Line 12:  'confirmAlert' is defined but never used         no-unused-vars
+
+./src/components/AddEvent.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/AddUser.js
+  Line 2:  'RouteComponentProps' is defined but never used  no-unused-vars
+  Line 3:  'Link' is defined but never used                 no-unused-vars
+  Line 3:  'NavLink' is defined but never used              no-unused-vars
+
+./src/components/EventList.js
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
+Request starting HTTP/1.1 GET http://localhost:51884/0.dc6fab19a80b14a9ddfb.hot-update.js  
+Request finished in 4.6837ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/user/list  
+Compiled with warnings.
+
+
+./src/components/EditEvent.js
+
+Request finished in 1544.8471ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/static/js/bundle.js  
+Request finished in 22585.8086ms 101 
+Request finished in 324.7266ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.4064ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 15.0244ms
+Request finished in 19.3321ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 3.4625ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/info?t=1556302363343  
+Request finished in 5.3931ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:51884/sockjs-node/561/asj5w0mh/websocket  
+Request starting HTTP/1.1 GET http://localhost:51884/manifest.json  
+Request finished in 5.8354ms 304 
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/edit/4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a  
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (4d1b0931-3dc8-4e83-8e57-bd2a47ba1b7a) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 29.3636ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.UserDTO'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 34.5374ms
+Request finished in 39.5312ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:51884/api/user/edit/[object Object] application/json 154
+Route matched with {action = "Edit", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) with arguments (DailyPlanner.DomainClasses.Models.User) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:51884/static/media/notification.651771e1.woff  
+Executed action method DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.2576ms.
+Executing ObjectResult, writing value of type 'DailyPlanner.DomainClasses.Models.User'.
+Executed action DailyPlanner.Web.Controllers.UserController.Edit (DailyPlanner.Web) in 32.7875ms
+Request finished in 40.6414ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:51884/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 34.402ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 43.1906ms
+Request finished in 55.2968ms 200 application/json; charset=utf-8
+Request finished in 1006.5958ms 304 
+Request finished in 7786036.2944ms 101 

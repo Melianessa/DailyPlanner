@@ -73,7 +73,6 @@ export class EditUser extends Component {
             Role: this.state.user.selectedRole,
             Id: this.state.user.id
         }
-        this.setState({ redirect: true });
         fetch('api/user/edit/' + id,
             {
                 method: "PUT",
@@ -83,18 +82,15 @@ export class EditUser extends Component {
                 },
                 body: JSON.stringify(body)
             }).then((response) => response.json())
-	        .then(data => {
-		        console.log(data);
-		        console.log(this.state.user);
-		        this.setState({user: data});
-		        console.log(this.state.event);
-	        })
+            .then(data => {
+                console.log(data);
+                console.log(this.state.user);
+                this.setState({ user: data, redirect: true });
+                console.log(this.state.event);
+            }).then(NotificationManager.success('Success message', 'User successfully edited!', 1000000))
             .then((responseJson) => {
                 this.props.history.push('/user/list');
             });
-    }
-    handleSubmit() {
-        NotificationManager.success('Success message', 'User successfully edited!', 1000000);
     }
     handleCancel() {
         this.props.history.push('/user/list');
@@ -105,90 +101,88 @@ export class EditUser extends Component {
         }
     }
     renderEditForm(user) {
-        return <form onSubmit={this.handleSubmit.bind(this)}>
-            <div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">First Name:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="text"
-                            value={user.firstName}
-                            onChange={this.handleChange.bind(this, 'firstName')} />
-                    </div>
+        return <div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">First Name:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="text"
+                        value={user.firstName}
+                        onChange={this.handleChange.bind(this, 'firstName')} />
                 </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Last Name:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="text"
-                            value={user.lastName}
-                            onChange={this.handleChange.bind(this, 'lastName')} />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Date of birth: </label>
-                    <div className="col-md-4">
-                        <DatePicker className="form-control"
-                            selected={user.dateOfBirth}
-                            onChange={this.handleChange.bind(this, 'dateOfBirth')}
-                            showYearDropdown
-                            scrollableYearDropdown
-                            yearDropdownItemNumber={15}
-                            showMonthDropdown
-                        />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Phone:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="phone"
-                            value={user.phone}
-                            onChange={this.handleChange.bind(this, 'phone')} />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Email:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="email"
-                            value={user.email}
-                            onChange={this.handleChange.bind(this, 'email')} />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Sex: </label>
-                    <div className="col-md-4">
-                        <select className="form-control" value={user.sex ? "Male" : "Female"} onChange={this.handleChange.bind(this, 'sex')} >
-                            <option value="">-- Select sex --</option>
-                            {this.state.sex.map(p =>
-                                <option key={p.name} value={p.value}>{p.name}</option>
-
-                            )}
-                        </select>
-                    </div>
-                </div >
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Role: </label>
-                    <div className="col-md-4">
-                        <select className="form-control" value={user.role === 1 ? "Client" : "Admin"} onChange={this.handleChange.bind(this, 'role')} >
-                            <option value="">-- Select role --</option>
-                            {this.state.role.map(p =>
-                                <option key={p.name} value={p.value}>{p.name}</option>
-
-                            )}
-                        </select>
-                    </div>
-                </div >
-
-                <div className="form-group">
-                    <button className="btn btn-success" onClick={this.handleClick}>Save user</button>
-                    <button className="btn btn-danger" onClick={this.handleCancel.bind(this)}>Cancel</button>
-                </div>
-                {this.renderRedirect()}
             </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Last Name:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="text"
+                        value={user.lastName}
+                        onChange={this.handleChange.bind(this, 'lastName')} />
+                </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Date of birth: </label>
+                <div className="col-md-4">
+                    <DatePicker className="form-control"
+                        selected={user.dateOfBirth}
+                        onChange={this.handleChange.bind(this, 'dateOfBirth')}
+                        showYearDropdown
+                        scrollableYearDropdown
+                        yearDropdownItemNumber={15}
+                        showMonthDropdown
+                    />
+                </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Phone:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="phone"
+                        value={user.phone}
+                        onChange={this.handleChange.bind(this, 'phone')} />
+                </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Email:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="email"
+                        value={user.email}
+                        onChange={this.handleChange.bind(this, 'email')} />
+                </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Sex: </label>
+                <div className="col-md-4">
+                    <select className="form-control" value={user.sex ? "Male" : "Female"} onChange={this
+                        .handleChange.bind(this, 'sex')} >
+                        <option value="">-- Select sex --</option>
+                        {this.state.sex.map(p =>
+                            <option key={p.name} value={p.value}>{p.name}</option>
+                        )}
+                    </select>
+                </div>
+            </div >
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Role: </label>
+                <div className="col-md-4">
+                    <select className="form-control" value={user.role === 1 ? "Client" : "Admin"} onChange={this
+                        .handleChange.bind(this, 'role')} >
+                        <option value="">-- Select role --</option>
+                        {this.state.role.map(p =>
+                            <option key={p.name} value={p.value}>{p.name}</option>
+                        )}
+                    </select>
+                </div>
+            </div >
+
+            <div className="form-group">
+                <button className="btn btn-success" onClick={this.handleClick}>Save user</button>
+                <button className="btn btn-danger" onClick={this.handleCancel.bind(this)}>Cancel</button>
+            </div>
+            {this.renderRedirect()}
             <NotificationContainer />
-        </form>
+        </div>;
     }
     render() {
         let contents = this.state.loading

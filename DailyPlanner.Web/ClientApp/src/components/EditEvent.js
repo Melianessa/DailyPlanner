@@ -5,7 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import "react-datepicker/dist/react-datepicker.css";
-import DatePicker from "react-datepicker";
+import DatePicker from 'react-datepicker';
 import { EventList } from './EventList';
 import "./NavMenu.css";
 import "./style.css";
