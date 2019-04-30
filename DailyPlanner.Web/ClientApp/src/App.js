@@ -23,6 +23,7 @@ export default class App extends Component {
                 <Route path='/user/list' component={UserList} />
                 <Route path='/event/edit/:id' component={EditEvent} />
                 <Route path='/user/edit/:id' component={EditUser} />
+                <Route path='/swagger' component={() => { window.location = '/swagger'; return null; }} />
                 </Layout>
         );
     }

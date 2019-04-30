@@ -49,11 +49,11 @@ export class AddEvent extends Component {
         this.setState({ selectedType: newType });
         console.log(e.target.value);
     }
-    handleClick(title, description, selectedType) {
+    handleClick() {
         let body = {
-            Title: title,
-            Description: description,
-            Type: selectedType,
+            Title: this.state.title,
+            Description: this.state.description,
+            Type: this.state.selectedType,
             StartDate: this.state.startDate,
             EndDate: this.state.endDate
         }
@@ -68,88 +68,87 @@ export class AddEvent extends Component {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(body)
-            });
+            }).then(NotificationManager.success('Success message', 'Event successfully added!', 1000000))
+	        .then(this.setState({ redirect: true }));;
 
     }
-    handleSubmit() {
-        NotificationManager.success('Success message', 'Event successfully added!', 1000000);
+    handleCancel() {
+	    this.props.history.push('/event/list');
     }
-     
     renderRedirect() {
         if (this.state.redirect) {
-            return <Redirect to='/event/list' component={EventList} />
+	        this.props.history.push('/event/list');
         }
     }
     renderCreateForm() {
-        return <form onSubmit={this.handleSubmit.bind(this, this.state.title)}>
-            <div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Title:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="text"
-                            value={this.state.title}
-                            onChange={this.handleChange}
-                            placeholder="Write a title..." />
-                    </div>
+        return <div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Title:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="text"
+                        value={this.state.title}
+                        onChange={this.handleChange}
+                        placeholder="Write a title..." />
                 </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Description:</label>
-                    <div className="col-md-4">
-                        <input className="form-control"
-                            type="text"
-                            value={this.state.description}
-                            onChange={this.handleChangeDesc.bind(this)}
-                            placeholder="Write a description..." />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Type: </label>
-                    <div className="col-md-4">
-                        <select className="form-control" value={this.state.selectedType} onChange={this.handleChangeType} >
-                            <option value="">-- Select type --</option>
-                            {this.state.type.map(et =>
-                                <option key={et.name} value={et.value}>{et.name}</option>
-
-                            )}
-                        </select>
-                    </div>
-                </div >
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">Start date: </label>
-                    <div className="col-md-4">
-                        <DatePicker className="form-control"
-                            selected={this.state.startDate}
-                            onChange={this.handleChangeDate}
-                            showTimeSelect
-                            timeFormat="HH:mm"
-                            timeIntervals={15}
-                            dateFormat="MMMM d, yyyy h:mm aa"
-                            timeCaption="time"
-                        />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label className=" control-label col-md-12">End date: </label>
-                    <div className="col-md-4">
-                        <DatePicker className="form-control"
-                            selected={this.state.endDate}
-                            onChange={this.handleChangeDateEnd}
-                            showTimeSelect
-                            timeFormat="HH:mm"
-                            timeIntervals={15}
-                            dateFormat="MMMM d, yyyy h:mm aa"
-                            timeCaption="time"
-                        />
-                    </div>
-                </div>
-                <div className="form-group">
-                    <button className="btn btn-success" onClick={this.handleClick.bind(this, this.state.title, this.state.description, this.state.selectedType)}>Save event</button>
-                </div>
-                {this.renderRedirect()}
             </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Description:</label>
+                <div className="col-md-4">
+                    <input className="form-control"
+                        type="text"
+                        value={this.state.description}
+                        onChange={this.handleChangeDesc.bind(this)}
+                        placeholder="Write a description..." />
+                </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Type: </label>
+                <div className="col-md-4">
+                    <select className="form-control" value={this.state.selectedType} onChange={this
+                        .handleChangeType} >
+                        <option value="">-- Select type --</option>
+                        {this.state.type.map(et =>
+                            <option key={et.name} value={et.value}>{et.name}</option>
+                        )}
+                    </select>
+                </div>
+            </div >
+            <div className="form-group row">
+                <label className=" control-label col-md-12">Start date: </label>
+                <div className="col-md-4">
+                    <DatePicker className="form-control"
+                        selected={this.state.startDate}
+                        onChange={this.handleChangeDate}
+                        showTimeSelect
+                        timeFormat="HH:mm"
+                        timeIntervals={15}
+                        dateFormat="MMMM d, yyyy h:mm aa"
+                        timeCaption="time"
+                    />
+                </div>
+            </div>
+            <div className="form-group row">
+                <label className=" control-label col-md-12">End date: </label>
+                <div className="col-md-4">
+                    <DatePicker className="form-control"
+                        selected={this.state.endDate}
+                        onChange={this.handleChangeDateEnd}
+                        showTimeSelect
+                        timeFormat="HH:mm"
+                        timeIntervals={15}
+                        dateFormat="MMMM d, yyyy h:mm aa"
+                        timeCaption="time"
+                    />
+                </div>
+            </div>
+            <div className="form-group">
+                <button className="btn btn-success" onClick={this.handleClick.bind(this)}>Save event</button>
+	            <button className="btn btn-danger" onClick={this.handleCancel.bind(this)}>Cancel</button>
+            </div>
+            {this.renderRedirect()}
             <NotificationContainer />
-        </form>
+        </div>;
     }
     render() {
         let contents = this.state.loading

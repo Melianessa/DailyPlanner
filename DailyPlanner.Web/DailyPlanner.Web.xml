@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DailyPlanner.Web</name>
+    </assembly>
+    <members>
+        <member name="M:DailyPlanner.Web.Controllers.EventController.GetByDate(System.String)">
+            <summary>
+            Get all Events to date.
+            </summary>
+            <param name="date">The event date to search for</param>
+            <returns>A list of events</returns>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.EventController.Get(System.Guid)">
+            <summary>
+            Get a specific Event.
+            </summary>
+            <param name="id">The event id to search for</param>
+            <returns>A event information</returns>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.EventController.Create(DailyPlanner.DomainClasses.Models.Event)">
+             <summary>
+             Creates a Event.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "id": "1",
+                    "title": "birthday",
+                    "description": "my birthday",
+                    "startDate": "4/24/2019 1:00:00 PM",
+                    "endDate": "4/25/2019 1:00:00 PM",
+                    "creationDate": "4/24/2019 1:00:00 PM",
+                    "isActive": true,
+                    "type": 0,
+                    "user": {
+                        "id": "2",
+                        "firstName": "Dan",
+                        "lastName": "Reynolds",
+                        "creationDate": "4/24/2019 1:00:00 PM",
+                        "dateOfBirth": "7/14/1987 12:00:00 PM",
+                        "phone": "5556677",
+                        "email": "user@mail.com",
+                        "sex": true,
+                        "isActive": true,
+                        "role": 0,
+                        "events": [
+                           null
+                        ]
+                    }
+                 }
+            
+             </remarks>
+             <param name="ev">An event to create</param>
+             <returns>A newly created Event</returns>
+             <response code="201">Returns the newly created event</response>
+             <response code="400">If the event is null</response>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.EventController.Edit(System.Guid)">
+            <summary>
+            Edit a specific Event.
+            </summary>
+            <param name="id">The event id to edit for</param>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.EventController.Edit(DailyPlanner.DomainClasses.Models.Event)">
+            <summary>
+            Edit a specific Event.
+            </summary>
+            <param name="ev">The event to edit for</param>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.EventController.Delete(System.Guid)">
+            <summary>
+            Deletes a specific Event.
+            </summary>
+            <param name="id">The event id to delete for</param>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.UserController.GetAllUsers">
+            <summary>
+            Get all Users.
+            </summary>
+            <returns>A list of users</returns>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.UserController.Get(System.Guid)">
+            <summary>
+            Get a specific User.
+            </summary>
+            <param name="id">The user id to search for</param>
+            <returns>A user information</returns>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.UserController.Create(DailyPlanner.DomainClasses.Models.User)">
+             <summary>
+             Creates a User.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "id": 1,
+                    "firstName": "Dan",
+                    "lastName": "Reynolds",
+                    "creationDate": "4/24/2019 1:00:00 PM",
+                    "dateOfBirth": "4/24/1996 12:00:00 PM",
+                    "phone": 5556677,
+                    "email": "user@mail.com",
+                    "sex": true,
+                    "isActive": true,
+                    "role": 1,
+                    "eventCount": 0
+                 }
+            
+             </remarks>
+             <param name="user">A user to create</param>
+             <returns>A newly created User</returns>
+             <response code="201">Returns the newly created user</response>
+             <response code="400">If the user is null</response>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.UserController.Edit(System.Guid)">
+            <summary>
+            Edit a specific User.
+            </summary>
+            <param name="id">The user id to edit for</param>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.UserController.Edit(DailyPlanner.DomainClasses.Models.User)">
+            <summary>
+            Edit a specific User.
+            </summary>
+            <param name="user">The user to edit for</param>
+        </member>
+        <member name="M:DailyPlanner.Web.Controllers.UserController.Delete(System.Guid)">
+            <summary>
+            Deletes a specific User.
+            </summary>
+            <param name="id">The user id to delete for</param>
+        </member>
+    </members>
+</doc>

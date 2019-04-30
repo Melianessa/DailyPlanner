@@ -23,6 +23,7 @@ namespace DailyPlanner.API.Controllers
         {
             return _iRepo.GetAll();
         }
+        
         [HttpGet]
         public IEnumerable<UserDTO> GetAllUsers()
         {
@@ -34,6 +35,7 @@ namespace DailyPlanner.API.Controllers
         //{
         //    return _iRepo.Get(id);
         //}
+        
         [HttpGet("{id}")]
         public UserDTO GetUser(Guid id)
         {
@@ -41,6 +43,7 @@ namespace DailyPlanner.API.Controllers
         }
 
         // POST api/values
+        
         [HttpPost]
         public Guid Post([FromBody] User user)
         {

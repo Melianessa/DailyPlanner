@@ -86,8 +86,7 @@ export class EditUser extends Component {
                 console.log(data);
                 console.log(this.state.user);
                 this.setState({ user: data, redirect: true });
-                console.log(this.state.event);
-            }).then(NotificationManager.success('Success message', 'User successfully edited!', 1000000))
+                }).then(NotificationManager.success('Success message', 'User successfully edited!', 1000000))
             .then((responseJson) => {
                 this.props.history.push('/user/list');
             });

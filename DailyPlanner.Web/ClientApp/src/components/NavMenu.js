@@ -42,6 +42,11 @@ export class NavMenu extends Component {
 		                    <NavItem>
                                 <Glyphicon glyph='edit' /> Create new user
 		                    </NavItem>
+                        </LinkContainer>
+                        <LinkContainer to={'/swagger'}>
+		                    <NavItem>
+                                <Glyphicon glyph='eye-open' /> Swagger API
+		                    </NavItem>
 	                    </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>

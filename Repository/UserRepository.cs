@@ -60,7 +60,7 @@ namespace DailyPlanner.Repository
             _context.SaveChanges();
             return _context.Users.Count();
         }
-
+        
         public IEnumerable<UserDTO> GetAllUsers()
         {
             return _context.Users.Include(p => p.Events).Select(p => new UserDTO(p)).ToList();

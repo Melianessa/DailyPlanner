@@ -81,10 +81,12 @@ export class AddUser extends Component {
             }).then(NotificationManager.success('Success message', 'User successfully added!', 1000000))
             .then(this.setState({ redirect: true }));
     }
-
+    handleCancel() {
+	    this.props.history.push('/user/list');
+    }
     renderRedirect() {
         if (this.state.redirect) {
-            return <Redirect to='/user/list' component={UserList} />;
+            this.props.history.push('/user/list');
         }
     }
     renderCreateForm() {
@@ -169,6 +171,7 @@ export class AddUser extends Component {
 
             <div className="form-group">
                 <button className="btn btn-success" onClick={this.handleClick}>Save user</button>
+	            <button className="btn btn-danger" onClick={this.handleCancel.bind(this)}>Cancel</button>
             </div>
             <NotificationContainer />
             {this.renderRedirect()}
@@ -187,6 +190,5 @@ export class AddUser extends Component {
                 {contents}
             </div>
         );
-
     }
 }

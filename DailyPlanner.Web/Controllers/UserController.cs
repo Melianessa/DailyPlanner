@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DailyPlanner.DomainClasses;
 using DailyPlanner.DomainClasses.Models;
+using DailyPlanner.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -25,7 +26,12 @@ namespace DailyPlanner.Web.Controllers
             _logger = logger;
             _mapper = mapper;
         }
+        /// <summary>
+        /// Get all Users.
+        /// </summary>
+        /// <returns>A list of users</returns>
         [HttpGet]
+        [ServiceFilter(typeof(DailyPlannerExceptionFilterAttribute))]
         public async Task<IEnumerable<UserDTO>> GetAllUsers()
         {
             List<UserDTO> user = new List<UserDTO>();
@@ -67,33 +73,65 @@ namespace DailyPlanner.Web.Controllers
 
         //    return user;
         //}
-
-        //[HttpGet("{id}")]
-        //public async Task<User> Get(Guid id)
-        //{
-        //    User users = new User();
-        //    try
-        //    {
-        //        HttpClient client = _userAPI.InitializeClient();
-        //        HttpResponseMessage res = await client.GetAsync($"api/user/get/{id}");
-        //        if (res.IsSuccessStatusCode)
-        //        {
-        //            var result = res.Content.ReadAsStringAsync().Result;
-        //            users = JsonConvert.DeserializeObject<User>(result);
-        //        }
-        //        if (users == null)
-        //        {
-        //            _logger.LogWarning("Error in Get method, user is NULL");
-        //            }
-        //        return users;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        _logger.LogWarning($"Error in Get method: {e.Message}");
-        //    }
-        //    return users;
-        //}
+        /// <summary>
+        /// Get a specific User.
+        /// </summary>
+        /// <param name="id">The user id to search for</param>
+        /// <returns>A user information</returns>
+        [HttpGet("{id}")]
+        public async Task<User> Get(Guid id)
+        {
+            User users = new User();
+            try
+            {
+                HttpClient client = _userAPI.InitializeClient();
+                HttpResponseMessage res = await client.GetAsync($"api/user/get/{id}");
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    users = JsonConvert.DeserializeObject<User>(result);
+                }
+                if (users == null)
+                {
+                    _logger.LogWarning("Error in Get method, user is NULL");
+                }
+                return users;
+            }
+            catch (Exception e)
+            {
+                _logger.LogWarning($"Error in Get method: {e.Message}");
+            }
+            return users;
+        }
+        /// <summary>
+        /// Creates a User.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "id": 1,
+        ///        "firstName": "Dan",
+        ///        "lastName": "Reynolds",
+        ///        "creationDate": "4/24/2019 1:00:00 PM",
+        ///        "dateOfBirth": "4/24/1996 12:00:00 PM",
+        ///        "phone": 5556677,
+        ///        "email": "user@mail.com",
+        ///        "sex": true,
+        ///        "isActive": true,
+        ///        "role": 1,
+        ///        "eventCount": 0
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="user">A user to create</param>
+        /// <returns>A newly created User</returns>
+        /// <response code="201">Returns the newly created user</response>
+        /// <response code="400">If the user is null</response>
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Create([FromBody]User user)
         {
             try
@@ -117,34 +155,10 @@ namespace DailyPlanner.Web.Controllers
 
             return Ok(user);
         }
-
-        //[HttpGet("{id}")]
-        //public async Task<User> Edit(Guid id)
-        //{
-        //    User user = new User();
-        //    try
-        //    {
-        //        if (id == null)
-        //        {
-        //            _logger.LogWarning("In Edit method Id is NULL");
-        //        }
-        //        HttpClient client = _userAPI.InitializeClient();
-        //        HttpResponseMessage res = await client.GetAsync($"api/user/get/{id}");
-
-        //        if (res.IsSuccessStatusCode)
-        //        {
-        //            var result = await res.Content.ReadAsStringAsync();
-        //            user = JsonConvert.DeserializeObject<User>(result);
-        //        }
-
-        //        return user;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        _logger.LogWarning($"Error in Edit method: {e.Message}");
-        //    }
-        //    return user;
-        //}
+        /// <summary>
+        /// Edit a specific User.
+        /// </summary>
+        /// <param name="id">The user id to edit for</param>
         [HttpGet("{id}")]
         public async Task<UserDTO> Edit(Guid id)
         {
@@ -172,6 +186,10 @@ namespace DailyPlanner.Web.Controllers
             }
             return user;
         }
+        /// <summary>
+        /// Edit a specific User.
+        /// </summary>
+        /// <param name="user">The user to edit for</param>
         [HttpPut("{id}")]
         public async Task<User> Edit([FromBody]User user)
         {
@@ -197,20 +215,18 @@ namespace DailyPlanner.Web.Controllers
             }
             return newUser;
         }
-
+        /// <summary>
+        /// Deletes a specific User.
+        /// </summary>
+        /// <param name="id">The user id to delete for</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             try
             {
-                if (id == null)
-                {
-                    _logger.LogInformation("In Delete method Id is NULL");
-                    return NotFound();
-                }
                 User user = new User();
                 HttpClient client = _userAPI.InitializeClient();
-                HttpResponseMessage res = await client.GetAsync($"api/user/delete/{id}");
+                HttpResponseMessage res = await client.DeleteAsync($"api/user/delete/{id}");
 
                 if (res.IsSuccessStatusCode)
                 {
