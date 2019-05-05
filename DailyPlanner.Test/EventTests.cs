@@ -73,7 +73,7 @@ namespace DailyPlanner.Test
             Event newEvent = new Event() { Title = "Concert"};
             var data = controller.Get(_events[0].Id);
             //Act  
-            var result = controller.Put(data.Id,newEvent);
+            var result = controller.Put(newEvent);
             //Assert  
             Assert.AreEqual(result.Title, newEvent.Title);
         }

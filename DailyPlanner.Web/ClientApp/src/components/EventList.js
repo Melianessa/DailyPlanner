@@ -1,6 +1,6 @@
 ﻿import React, { Component } from "react";
 import { NavLink } from "reactstrap";
-import { Router, Route } from 'react-router';
+import { Router, Route } from "react-router";
 import { Link } from "react-router-dom";
 import "./NavMenu.css";
 import "./style.css";
@@ -8,6 +8,7 @@ import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
+import { NotificationContainer, NotificationManager } from "react-notifications";
 
 
 export class EventList extends Component {
@@ -16,16 +17,16 @@ export class EventList extends Component {
     constructor(props) {
         super(props);
         let date = new Date();
-        this.state = { events: [], loading: true, selectedDay: date, offset: new Date().getTimezoneOffset()};
+        this.state = { events: [], loading: true, selectedDay: date, offset: new Date().getTimezoneOffset() };
         this.handleDelete = this.handleDelete.bind(this);
         this.helperDelete = this.helperDelete.bind(this);
         this.handleDayClick = this.handleDayClick.bind(this);
         this.handleGetAll = this.handleGetAll.bind(this);
         this.handleGetAll(new Date());
-        }
+    }
     handleGetAll(day) {
         let reqBody = { date: day.toLocaleDateString("en-US") };
-        fetch('api/event/getByDate', {
+        fetch("api/event/getByDate", {
             method: "POST",
             headers: {
                 //"Accept": "application/json",
@@ -41,25 +42,30 @@ export class EventList extends Component {
         }).then(data => {
             this.handleDayClick(day);
             for (var i = 0; i < data.length; i++) {
-	            let startMinutes = new Date(data[i].startDate).setMinutes(new Date(data[i].startDate).getMinutes() -
-		            this.state.offset);
-	            let endMinutes = new Date(data[i].endDate).setMinutes(new Date(data[i].endDate).getMinutes() -
-		            this.state.offset);
-	            data[i].startDate = new Date(startMinutes).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-	            data[i].endDate = new Date(endMinutes).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-	            }
+                let startMinutes = new Date(data[i].startDate).setMinutes(new Date(data[i].startDate).getMinutes() -
+                    this.state.offset);
+                let endMinutes = new Date(data[i].endDate).setMinutes(new Date(data[i].endDate).getMinutes() -
+                    this.state.offset);
+                data[i].startDate = new Date(startMinutes).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+                data[i].endDate = new Date(endMinutes).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+            }
             this.setState({
                 events: data, loading: false
             });
-            });
-        
+            if (this.props.location.state && this.props.location.state.actionMessage) {
+                NotificationManager.success("Success message", `Event successfully ${this.props.location.state.actionMessage}!`, 3000, () => {
+                    this.props.location.state.actionMessage = null;
+                });
+            }
+        });
+
     }
 
     handleDayClick(day) {
         this.setState({ selectedDay: day });
     }
     helperDelete(id) {
-        fetch('api/event/delete/' + id,
+        fetch("api/event/delete/" + id,
             {
                 method: "DELETE"
             })
@@ -67,10 +73,7 @@ export class EventList extends Component {
                 events: this.state.events.filter((rec) => {
                     return (rec.id !== id);
                 })
-            })
-
-            );
-
+            }));
     }
 
     handleDelete(id) {
@@ -91,12 +94,9 @@ export class EventList extends Component {
     }
 
     handleEdit(id) {
-        //this.props.match.params.id = id;
-        //history.push('api/event/edit/' + id);
-        //return <Route path="/event/edit/:id" component={EditEvent} />;
         this.props.match.params.id = id;
-        this.props.history.push('/event/edit/' + id);
-        
+        this.props.history.push("/event/edit/" + id);
+
     }
     renderEvent(events) {
         return (
@@ -117,9 +117,10 @@ export class EventList extends Component {
                             <td className="event-date-header">
                                 <div>{ev.title}</div>
                                 <div>{ev.description}</div>
+                                <div>{ev.type}</div>
                             </td>
                             <td>
-	                            <button className="btn btn-warning" onClick={() => this.handleEdit(ev.id)}>Edit</button>
+                                <button className="btn btn-warning" onClick={() => this.handleEdit(ev.id)}>Edit</button>
                                 <button className="btn btn-danger" onClick={() => this.handleDelete(ev.id)}>Delete</button>
                             </td>
                         </tr>
@@ -142,6 +143,7 @@ export class EventList extends Component {
                     <NavLink tag={Link} className="btn btn-success" to="/event/create">Create new</NavLink>
                 </div>
                 {contents}
+                <NotificationContainer />
             </div>
         );
     }

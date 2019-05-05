@@ -29,6 +29,9 @@ namespace DailyPlanner.Repository
 
         public Guid Add(User b)
         {
+            b.Id = Guid.NewGuid();
+            b.CreationDate = DateTime.UtcNow;
+            b.IsActive = true;
             _context.Users.Add(b);
             _context.SaveChanges();
             return b.Id;
@@ -43,6 +46,7 @@ namespace DailyPlanner.Repository
                 user.LastName = b.LastName;
                 user.DateOfBirth = b.DateOfBirth;
                 user.Email = b.Email;
+                user.Sex = b.Sex;
                 user.Phone = b.Phone;
                 user.Role = b.Role;
                 user.IsActive = b.IsActive;

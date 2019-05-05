@@ -1,6 +1,6 @@
-﻿import React, { Component } from 'react';
-import { RouteComponentProps } from 'react-router';
-import { Link, NavLink } from 'react-router-dom';
+﻿import React, { Component } from "react";
+import { RouteComponentProps } from "react-router";
+import { Link, NavLink } from "react-router-dom";
 
 export class test extends Component {
     constructor(props) {
@@ -9,7 +9,7 @@ export class test extends Component {
         this.state = { events: [], loading: true, selectedDay: date, title: "", typeList: [{ name: "Meeting", value: 0 }, { name: "Reminder", value: 1 }, { name: "Event", value: 2 }, { name:"Task", value:3 }] };
         var eventid = this.props.match.params["eventid"];
         if (eventid > 0) {
-            fetch('api/event/update/' + eventid)
+            fetch("api/event/update/" + eventid)
                 .then(response => {
                     const json = response.json();
                     console.log(json);
@@ -32,18 +32,18 @@ export class test extends Component {
         event.preventDefault();
         const data = new FormData(event.target);
         if (this.state.events.id) {
-            fetch('api/event/update/' + id,
+            fetch("api/event/update/" + id,
                 {
-                    method: 'PUT',
+                    method: "PUT",
                     body: data
                 }).then((response) => response.json())
                 .then((responseJson) => {
                     this.props.history.push("/eventlist");
                 });
         } else {
-            fetch('api/event/create/' + id,
+            fetch("api/event/create/" + id,
                 {
-                    method: 'POST',
+                    method: "POST",
                     body: data
                 }).then((response) => response.json())
                 .then((responseJson) => {

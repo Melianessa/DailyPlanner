@@ -1,27 +1,21 @@
-﻿import React, { Component } from 'react';
-import { RouteComponentProps, Router, Route } from 'react-router';
-import { NavLink } from "reactstrap";
-import { Link, Redirect } from 'react-router-dom';
-import 'react-notifications/lib/notifications.css';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+﻿import React, { Component } from "react";
+import "react-notifications/lib/notifications.css";
 import "react-datepicker/dist/react-datepicker.css";
-import DatePicker from 'react-datepicker';
-import { EventList } from './EventList';
+import DatePicker from "react-datepicker";
 import "./NavMenu.css";
 import "./style.css";
-import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
+import { staticData } from "./Context";
 
 export class EditEvent extends Component {
     static displayName = EditEvent.name;
     constructor(props) {
         super(props);
-        let typeList = [
-            { name: "Meeting", value: 0 }, { name: "Reminder", value: 1 }, { name: "Event", value: 2 }, { name: "Task", value: 3 }];
+        let typeList = staticData.eventTypes;
         this.state = {
             event: [],
-            title: '',
-            description: '',
+            title: "",
+            description: "",
             type: typeList,
             selectedType: null,
             redirect: false,
@@ -34,18 +28,19 @@ export class EditEvent extends Component {
         this.startPage(this.props.match.params.id);
     }
     startPage(id) {
-        fetch('api/event/edit/' + id)
+        fetch("api/event/edit/" + id)
             .then(response => {
                 const json = response.json();
                 console.log(json);
                 return json;
             }).then(data => {
-                console.log(data);
+                console.log(data.startDate);
                 console.log(this.state.event);
-                //let startMinutes = new Date(data.startDate).setMinutes(new Date(data.startDate).getMinutes() - this.state.offset);
-                //    let endMinutes = new Date(data.endDate).setMinutes(new Date(data.endDate).getMinutes() - this.state.offset);
-                //    data.startDate = new Date(startMinutes).toLocaleString();
-                //    data.endDate = new Date(endMinutes).toLocaleString();
+                let startMinutes = new Date(data.startDate).setMinutes(new Date(data.startDate).getMinutes() - this.state.offset);
+                let endMinutes = new Date(data.endDate).setMinutes(new Date(data.endDate).getMinutes() - this.state.offset);
+                data.startDate = new Date(startMinutes).toISOString();
+                data.endDate = new Date(endMinutes).toISOString();
+                console.log(data.startDate);
                 this.setState({
                     event: data, loading: false, selectedType: data.type
                 });
@@ -59,6 +54,9 @@ export class EditEvent extends Component {
         } else {
             event[propertyName] = e.target.value;
         }
+        if (propertyName === "type") {
+            this.state.selectedType = e.target.value;
+        }
         this.setState({ event: event });
     }
     handleClick(id) {
@@ -70,32 +68,32 @@ export class EditEvent extends Component {
             EndDate: this.state.event.endDate,
             Id: this.state.event.id
         }
-        fetch('api/event/edit/' + id,
-            {
-                method: "PUT",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(body)
-            }).then((response) => response.json())
+        fetch("api/event/edit/" + id,
+                {
+                    method: "PUT",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(body)
+                }).then((response) => response.json())
             .then(data => {
 
                 console.log(data);
                 console.log(this.state.event);
                 this.setState({ event: data, redirect: true });
                 console.log(this.state.event);
-            }).then(NotificationManager.success('Success message', 'Event successfully edited!', 1000000))
-            .then((responseJson) => {
-                this.props.history.push('/event/list');
             });
     }
     handleCancel() {
-        this.props.history.push('/event/list');
+        this.props.history.push("/event/list");
     }
     renderRedirect() {
         if (this.state.redirect) {
-            this.props.history.push('/event/list');
+            this.props.history.push({
+                pathname: "/event/list",
+                state: { actionMessage: "edited" }
+            });
         }
     }
     renderEditForm(event) {
@@ -106,7 +104,7 @@ export class EditEvent extends Component {
                     <input className="form-control"
                         type="text"
                         value={event.title}
-                        onChange={this.handleChange.bind(this, 'title')} />
+                        onChange={this.handleChange.bind(this, "title")} />
                 </div>
             </div>
             <div className="form-group row">
@@ -115,13 +113,13 @@ export class EditEvent extends Component {
                     <input className="form-control"
                         type="text"
                         value={event.description}
-                        onChange={this.handleChange.bind(this, 'description')} />
+                        onChange={this.handleChange.bind(this, "description")} />
                 </div>
             </div>
             <div className="form-group row">
                 <label className=" control-label col-md-12">Type: </label>
                 <div className="col-md-4">
-                    <select className="form-control" value={this.state.selectedType} onChange={this.handleChange.bind(this, 'type')} >
+                    <select className="form-control" value={this.state.selectedType} onChange={this.handleChange.bind(this, "type")} >
                         <option value="">-- Select type --</option>
                         {this.state.type.map(et =>
                             <option key={et.name} value={et.value}>{et.name}</option>
@@ -134,7 +132,7 @@ export class EditEvent extends Component {
                 <div className="col-md-4">
                     <DatePicker className="form-control"
                         selected={event.startDate}
-                        onChange={this.handleChange.bind(this, 'startDate')}
+                        onChange={this.handleChange.bind(this, "startDate")}
                         showTimeSelect
                         timeFormat="HH:mm"
                         timeIntervals={15}
@@ -148,7 +146,7 @@ export class EditEvent extends Component {
                 <div className="col-md-4">
                     <DatePicker className="form-control"
                         selected={event.endDate}
-                        onChange={this.handleChange.bind(this, 'endDate')}
+                        onChange={this.handleChange.bind(this, "endDate")}
                         showTimeSelect
                         timeFormat="HH:mm"
                         timeIntervals={15}
@@ -162,7 +160,6 @@ export class EditEvent extends Component {
                 <button className="btn btn-danger" onClick={this.handleCancel.bind(this)}>Cancel</button>
             </div>
             {this.renderRedirect()}
-            <NotificationContainer />
         </div>;
     }
     render() {

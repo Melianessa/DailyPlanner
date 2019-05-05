@@ -8,12 +8,6 @@ namespace DailyPlanner.DomainClasses.Models
 {
     public class Event : IBase
     {
-        public Event()
-        {
-            Id=Guid.NewGuid();
-            CreationDate = DateTime.UtcNow;
-            IsActive = true;
-        }
         [Key]
         public Guid Id { get; set; }
         [Required]

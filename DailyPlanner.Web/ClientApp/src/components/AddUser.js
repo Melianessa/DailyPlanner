@@ -1,26 +1,22 @@
-﻿import React, { Component } from 'react';
-import { RouteComponentProps } from 'react-router';
-import { Link, NavLink, Redirect } from 'react-router-dom';
-import 'react-notifications/lib/notifications.css';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+﻿import React, { Component } from "react";
+import "react-notifications/lib/notifications.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import { UserList } from "./UserList";
+import { staticData } from "./Context";
 
 
 export class AddUser extends Component {
     constructor(props) {
-        let roleList = [
-            { name: "Admin", value: 0 }, { name: "Client", value: 1 }];
-        let sexList = [{ name: "Male", value: true }, { name: "Female", value: false }];
+        let roleList = staticData.roleList;
+        let sexList = staticData.sexList;
         super(props);
         this.state = {
-            firstName: '',
-            lastName: '',
+            firstName: "",
+            lastName: "",
             dateOfBirth: new Date(),
-            phone: '',
-            email: '',
-            sex: sexList,
+            phone: "",
+            email: "",
+            sex: sexList ,
             role: roleList,
             selectedRole: null,
             selectedSex: null,
@@ -70,7 +66,7 @@ export class AddUser extends Component {
             Role: this.state.selectedRole
         }
 
-        fetch('api/user/create',
+        fetch("api/user/create",
             {
                 method: "POST",
                 headers: {
@@ -78,15 +74,18 @@ export class AddUser extends Component {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(body)
-            }).then(NotificationManager.success('Success message', 'User successfully added!', 1000000))
+            })//.then(NotificationManager.success("Success message", "User successfully added!", 3000))
             .then(this.setState({ redirect: true }));
     }
     handleCancel() {
-	    this.props.history.push('/user/list');
+	    this.props.history.push("/user/list");
     }
     renderRedirect() {
         if (this.state.redirect) {
-            this.props.history.push('/user/list');
+            this.props.history.push({
+                pathname: "/user/list",
+                state: { actionMessage: "added" }
+            });
         }
     }
     renderCreateForm() {
@@ -173,7 +172,6 @@ export class AddUser extends Component {
                 <button className="btn btn-success" onClick={this.handleClick}>Save user</button>
 	            <button className="btn btn-danger" onClick={this.handleCancel.bind(this)}>Cancel</button>
             </div>
-            <NotificationContainer />
             {this.renderRedirect()}
         </div>;
     }

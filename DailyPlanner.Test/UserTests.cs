@@ -62,7 +62,7 @@ namespace DailyPlanner.Test
         {
             var controller = new UserController(_userRepository);
             //Act  
-            var data = controller.Get(users[0].Id);
+            var data = controller.GetUser(users[0].Id);
             //Assert  
             Assert.AreEqual(data.Email, users[0].Email);
         }
@@ -71,9 +71,9 @@ namespace DailyPlanner.Test
         {
             var controller = new UserController(_userRepository);
             User newUser = new User() { LastName = "Snow" };
-            var data = controller.Get(users[0].Id);
+            var data = controller.GetUser(users[0].Id);
             //Act  
-            var result = controller.Put(data.Id, newUser);
+            var result = controller.Put(newUser);
             //Assert  
             Assert.AreEqual(result.LastName, newUser.LastName);
         }

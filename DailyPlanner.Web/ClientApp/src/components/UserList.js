@@ -6,18 +6,19 @@ import "./style.css";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Pagination from "react-js-pagination";
-//import { PaginationCustom } from "./Pagination";
+import { NotificationContainer, NotificationManager } from "react-notifications";
 
 export class UserList extends Component {
     static displayName = UserList.name;
 
     constructor(props) {
         super(props);
-        this.state = { users: [], loading: true, activePage: 1 };
+        this.state = { users: [], loading: true, activePage: 1, itemsPerPage: 3 };
         this.handleDelete = this.handleDelete.bind(this);
         this.helperDelete = this.helperDelete.bind(this);
         this.handlePageChange = this.handlePageChange.bind(this);
-        fetch('api/user/getAllUsers')
+        this.renderUser = this.renderUser.bind(this);
+        fetch("api/user/getAllUsers")
             .then(response => {
                 const json = response.json();
                 return json;
@@ -25,7 +26,13 @@ export class UserList extends Component {
                 this.setState({
                     users: data, loading: false
                 });
-
+                console.log(this.props.location);
+                if (this.props.location.state && this.props.location.state.actionMessage) {
+                    NotificationManager.success("Success message", `Event successfully ${this.props.location.state.actionMessage}!`, 3000, () => {
+                        this.props.location.state.actionMessage = null;
+                    });
+                    console.log(this.props.location);
+                }
             });
     }
     handlePageChange(pageNumber) {
@@ -33,18 +40,15 @@ export class UserList extends Component {
     }
 
     helperDelete(id) {
-        fetch('api/user/delete/' + id,
+        fetch("api/user/delete/" + id,
             {
                 method: "DELETE"
             })
             .then(this.setState({
-                events: this.state.users.filter((rec) => {
+                users: this.state.users.filter((rec) => {
                     return (rec.id !== id);
                 })
-            })
-
-            );
-
+            }));
     }
 
     handleDelete(id) {
@@ -65,8 +69,8 @@ export class UserList extends Component {
     }
 
     handleEdit(id) {
-	    this.props.match.params.id = id;
-	    this.props.history.push('/user/edit/' + id);
+        this.props.match.params.id = id;
+        this.props.history.push("/user/edit/" + id);
     }
     renderUser(users) {
         return (
@@ -84,26 +88,30 @@ export class UserList extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {users.map(u =>
-                        <tr key={u.id}>
-                            <td className="event-date-header">
-                                <div>{new Date(u.creationDate).toLocaleDateString()}</div>
-                            </td>
-                            <td>{u.firstName} {u.lastName}</td>
-                            <td className="event-date-header">
-                                <div>{new Date(u.dateOfBirth).toLocaleDateString()}</div>
-                            </td>
-                            <td>{u.phone}</td>
-                            <td>{u.email}</td>
-                            <td>{u.sex ? "Male" : "Female"}</td>
-                            <td>{u.role === 1 ? "Client" : "Admin"}</td>
-                            <td>{u.eventCount}</td>
-                            <td>
-                                <button className="btn btn-warning" onClick={() => this.handleEdit(u.id)}>Edit</button>
-                                <button className="btn btn-danger" onClick={() => this.handleDelete(u.id)}>Delete</button>
-                            </td>
-                        </tr>
-                    )}
+                    {users.map((u, index) => {
+                        var to = this.state.activePage * this.state.itemsPerPage;
+                        var from = to - this.state.itemsPerPage;
+                        if (index >= from && index < to) {
+                            return <tr key={u.id}>
+                                <td className="event-date-header">
+                                    <div>{new Date(u.creationDate).toLocaleDateString()}</div>
+                                </td>
+                                <td>{u.firstName} {u.lastName}</td>
+                                <td className="event-date-header">
+                                    <div>{new Date(u.dateOfBirth).toLocaleDateString()}</div>
+                                </td>
+                                <td>{u.phone}</td>
+                                <td>{u.email}</td>
+                                <td>{u.sex ? "Male" : "Female"}</td>
+                                <td>{u.role === 1 ? "Client" : "Admin"}</td>
+                                <td>{u.eventCount}</td>
+                                <td>
+                                    <button className="btn btn-warning" onClick={() => this.handleEdit(u.id)}>Edit</button>
+                                    <button className="btn btn-danger" onClick={() => this.handleDelete(u.id)}>Delete</button>
+                                </td>
+                            </tr>;
+                        }
+                    })}
                 </tbody>
             </table>
         );
@@ -112,7 +120,7 @@ export class UserList extends Component {
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : this.renderUser(this.state.users);
+            : this.renderUser(this.state.users, this.state.itemsPerPage);
 
         return (
             <div>
@@ -122,10 +130,11 @@ export class UserList extends Component {
                     <NavLink tag={Link} className="btn btn-success" to="/user/create">Create new</NavLink>
                 </div>
                 {contents}
+                <NotificationContainer />
                 <Pagination
                     hideDisabled
                     activePage={this.state.activePage}
-                    itemsCountPerPage={5}
+                    itemsCountPerPage={this.state.itemsPerPage}
                     totalItemsCount={this.state.users.length}
                     onChange={this.handlePageChange}
                 />

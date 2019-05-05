@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using DailyPlanner.DomainClasses.Enums;
 using DailyPlanner.DomainClasses.Interfaces;
 
@@ -9,12 +8,6 @@ namespace DailyPlanner.DomainClasses.Models
 {
     public class User:IBase
     {
-        public User()
-        {
-            Id=Guid.NewGuid();
-            CreationDate = DateTime.UtcNow;
-            IsActive = true;
-        }
         [Key]
         public Guid Id { get; set; }
         public string FirstName { get; set; }

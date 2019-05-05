@@ -1,24 +1,18 @@
-﻿import React, { Component } from 'react';
-import { RouteComponentProps } from 'react-router';
-import { Link, NavLink, Redirect } from 'react-router-dom';
-import 'react-notifications/lib/notifications.css';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+﻿import React, { Component } from "react";
+import "react-notifications/lib/notifications.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import { EventList } from './EventList';
+import { staticData } from "./Context";
 
 export class AddEvent extends Component {
     constructor(props) {
-        let typeList = [
-            { name: "Meeting", value: 0 }, { name: "Reminder", value: 1 }, { name: "Event", value: 2 },
-            { name: "Task", value: 3 }
-        ];
+        let typeList = staticData.eventTypes;
         super(props);
         this.state = {
-            title: '',
-            description: '',
+            title: "",
+            description: "",
             type: typeList,
-            selectedType: null,
+            selectedType: "",
             redirect: false,
             startDate: new Date(),
             endDate: new Date()
@@ -57,10 +51,10 @@ export class AddEvent extends Component {
             StartDate: this.state.startDate,
             EndDate: this.state.endDate
         }
-        this.setState({ redirect: true });
+        //this.setState({ redirect: true });
         //setTimeout(() => {
         //    this.setState({ redirect: true })}, 2000);
-        fetch('api/event/create',
+        fetch("api/event/create",
             {
                 method: "POST",
                 headers: {
@@ -68,16 +62,19 @@ export class AddEvent extends Component {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(body)
-            }).then(NotificationManager.success('Success message', 'Event successfully added!', 1000000))
-	        .then(this.setState({ redirect: true }));;
+            })//.then(NotificationManager.success('Success message', 'Event successfully added!', 3000))
+	        .then(this.setState({ redirect: true }));
 
     }
     handleCancel() {
-	    this.props.history.push('/event/list');
+	    this.props.history.push("/event/list");
     }
     renderRedirect() {
         if (this.state.redirect) {
-	        this.props.history.push('/event/list');
+            this.props.history.push({
+                pathname: "/event/list",
+                state: { actionMessage: "added" }
+            });
         }
     }
     renderCreateForm() {
@@ -147,7 +144,6 @@ export class AddEvent extends Component {
 	            <button className="btn btn-danger" onClick={this.handleCancel.bind(this)}>Cancel</button>
             </div>
             {this.renderRedirect()}
-            <NotificationContainer />
         </div>;
     }
     render() {
