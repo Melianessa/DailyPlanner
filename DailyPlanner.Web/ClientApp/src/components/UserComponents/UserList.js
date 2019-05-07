@@ -1,8 +1,8 @@
 ﻿import React, { Component } from "react";
 import { NavLink } from "reactstrap";
 import { Link } from "react-router-dom";
-import "./NavMenu.css";
-import "./style.css";
+import "../NavMenu.css";
+import "../style.css";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Pagination from "react-js-pagination";

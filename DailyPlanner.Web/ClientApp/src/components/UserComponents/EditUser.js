@@ -2,9 +2,9 @@
 import "react-notifications/lib/notifications.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import "./NavMenu.css";
-import "./style.css";
-import { staticData } from "./Context";
+import "../NavMenu.css";
+import "../style.css";
+import { staticData } from "../Context";
 import "react-confirm-alert/src/react-confirm-alert.css";
 
 export class EditUser extends Component {

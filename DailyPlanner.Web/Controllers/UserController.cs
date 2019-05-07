@@ -42,7 +42,7 @@ namespace DailyPlanner.Web.Controllers
                 if (res.IsSuccessStatusCode)
                 {
                     var result = await res.Content.ReadAsStringAsync();
-                    user = JsonConvert.DeserializeObject<List<UserDTO>>(result).OrderBy(p => p.CreationDate).ToList();
+                    user = JsonConvert.DeserializeObject<List<UserDTO>>(result).OrderByDescending(p => p.CreationDate).ToList();
                 }
             }
             catch (Exception e)

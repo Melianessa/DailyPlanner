@@ -2,13 +2,14 @@
 import { NavLink } from "reactstrap";
 import { Router, Route } from "react-router";
 import { Link } from "react-router-dom";
-import "./NavMenu.css";
-import "./style.css";
+import "../NavMenu.css";
+import "../style.css";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import { NotificationContainer, NotificationManager } from "react-notifications";
+import { staticData } from "../Context";
 
 
 export class EventList extends Component {
@@ -17,7 +18,15 @@ export class EventList extends Component {
     constructor(props) {
         super(props);
         let date = new Date();
-        this.state = { events: [], loading: true, selectedDay: date, offset: new Date().getTimezoneOffset() };
+        let typeList = staticData.eventTypes;
+        this.state = {
+            events: [],
+            loading: true,
+            type: typeList,
+            selectedType: "",
+            selectedDay: date,
+            offset: new Date().getTimezoneOffset()
+        };
         this.handleDelete = this.handleDelete.bind(this);
         this.helperDelete = this.helperDelete.bind(this);
         this.handleDayClick = this.handleDayClick.bind(this);
@@ -117,7 +126,7 @@ export class EventList extends Component {
                             <td className="event-date-header">
                                 <div>{ev.title}</div>
                                 <div>{ev.description}</div>
-                                <div>{ev.type}</div>
+                                
                             </td>
                             <td>
                                 <button className="btn btn-warning" onClick={() => this.handleEdit(ev.id)}>Edit</button>

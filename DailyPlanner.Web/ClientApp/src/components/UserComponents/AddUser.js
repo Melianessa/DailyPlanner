@@ -2,7 +2,7 @@
 import "react-notifications/lib/notifications.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import { staticData } from "./Context";
+import { staticData } from "../Context";
 
 
 export class AddUser extends Component {

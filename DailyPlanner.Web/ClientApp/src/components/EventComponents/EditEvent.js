@@ -2,10 +2,10 @@
 import "react-notifications/lib/notifications.css";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import "./NavMenu.css";
-import "./style.css";
+import "../NavMenu.css";
+import "../style.css";
 import "react-confirm-alert/src/react-confirm-alert.css";
-import { staticData } from "./Context";
+import { staticData } from "../Context";
 
 export class EditEvent extends Component {
     static displayName = EditEvent.name;
@@ -17,7 +17,7 @@ export class EditEvent extends Component {
             title: "",
             description: "",
             type: typeList,
-            selectedType: null,
+            selectedType: "",
             redirect: false,
             startDate: new Date(),
             endDate: new Date(),
