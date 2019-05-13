@@ -28,7 +28,7 @@ export class UserList extends Component {
                 });
                 console.log(this.props.location);
                 if (this.props.location.state && this.props.location.state.actionMessage) {
-                    NotificationManager.success("Success message", `Event successfully ${this.props.location.state.actionMessage}!`, 3000, () => {
+                    NotificationManager.success("Success message", `User successfully ${this.props.location.state.actionMessage}!`, 3000, () => {
                         this.props.location.state.actionMessage = null;
                     });
                     console.log(this.props.location);

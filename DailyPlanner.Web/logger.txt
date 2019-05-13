@@ -44367,3 +44367,632 @@ Request finished in 668.2326ms 200 application/json; charset=utf-8
 Request starting HTTP/1.1 POST http://localhost:51884/sockjs-node/121/r4wq5ymv/xhr_streaming?t=1557066067855  0
 Request finished in 1495.1925ms 101 
 Request finished in 25008.92ms 200 application/javascript; charset=UTF-8
+Starting create-react-app server on port 54769...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+./src/components/EditEvent.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/EditUser.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+  Line 61:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/UserList.js
+  Line 91:  Expected to return a value at the end of arrow function  array-callback-return
+
+./node_modules/object-assign/index.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react\cjs\react.development.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 1 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react-scripts\config\polyfills.js
+
+./node_modules/webpack/buildin/global.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\lodash.isfunction\index.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 23 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\node-libs-browser\node_modules\punycode\punycode.js
+
+
+Request finished in 31046.6917ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 655.2266ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 14.3953ms 200 font/woff2; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557488614902  
+Request finished in 7.8719ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/364/4w5hxso3/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 16.7385ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/favicon.ico  
+Request finished in 8.2083ms 200 image/x-icon
+Request starting HTTP/1.1 POST http://localhost:54528/api/event/getByDate application/x-www-form-urlencoded 18
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (5/10/2019) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3512.0052ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.Models.Event, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) in 3648.9245ms
+Request finished in 3722.3497ms 200 application/json; charset=utf-8
+Request finished in 16284.9364ms 101 
+Starting create-react-app server on port 54805...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+An unhandled exception has occurred while executing the request.
+Request finished in 281.3917ms 500 text/html; charset=utf-8
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Starting create-react-app server on port 54811...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+An unhandled exception has occurred while executing the request.
+Request finished in 256.079ms 500 text/html; charset=utf-8
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Starting create-react-app server on port 54894...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+./src/components/EditEvent.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/EditUser.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+  Line 61:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/UserList.js
+  Line 91:  Expected to return a value at the end of arrow function  array-callback-return
+
+./node_modules/object-assign/index.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react\cjs\react.development.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 1 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react-scripts\config\polyfills.js
+
+./node_modules/webpack/buildin/global.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\lodash.isfunction\index.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 23 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\node-libs-browser\node_modules\punycode\punycode.js
+
+
+Request finished in 18397.3774ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 27.2562ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 8.8414ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557489053058  
+Request finished in 8.4401ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/310/ong3q1mg/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 10.3304ms 304 
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/310/04yfkr2c/xhr_streaming?t=1557489053844  0
+Request finished in 1096.0011ms 101 
+Starting create-react-app server on port 54922...
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/310/04yfkr2c/xhr_streaming?t=1557489075872  0
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 24310.4042ms 200 application/javascript; charset=UTF-8
+Starting create-react-app server on port 55341...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 21717.5483ms 304 
+Starting create-react-app server on port 55351...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 19928.7832ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 37.0427ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 25.845ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557491096618  
+Request finished in 10.4439ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/715/rnumq33i/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 13.2659ms 304 
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/715/lbokngws/xhr_streaming?t=1557491097425  0
+Request finished in 1089.116ms 101 
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3786.1712ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 3969.6055ms
+Request finished in 4040.8898ms 200 application/json; charset=utf-8
+Request finished in 25070.4916ms 200 application/javascript; charset=UTF-8
+Starting create-react-app server on port 56374...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+./src/components/EditEvent.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/EditUser.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+  Line 61:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/UserList.js
+  Line 91:  Expected to return a value at the end of arrow function  array-callback-return
+
+./node_modules/object-assign/index.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react\cjs\react.development.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 1 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react-scripts\config\polyfills.js
+
+./node_modules/webpack/buildin/global.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\lodash.isfunction\index.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 23 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\node-libs-browser\node_modules\punycode\punycode.js
+
+
+Request finished in 26954.0487ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 290.2597ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 7.517ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557492658225  
+Request finished in 24.2ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/237/2bglskgx/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 17.7099ms 304 
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/237/0hpp0osq/xhr_streaming?t=1557492659037  0
+Request finished in 1104.8396ms 101 
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4718.9479ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 4990.9056ms
+Request finished in 5077.6271ms 200 application/json; charset=utf-8
+Starting create-react-app server on port 56681...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+./src/components/EditEvent.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/EditUser.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+  Line 61:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/UserList.js
+  Line 91:  Expected to return a value at the end of arrow function  array-callback-return
+
+./node_modules/object-assign/index.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react\cjs\react.development.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 1 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react-scripts\config\polyfills.js
+
+./node_modules/webpack/buildin/global.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\lodash.isfunction\index.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 23 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\node-libs-browser\node_modules\punycode\punycode.js
+
+
+Request finished in 25396.6017ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 197.6304ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 7.328ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557492996641  
+Request finished in 21.0189ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/901/mysblqoh/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 22.9508ms 304 
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/901/uzy3r5sk/xhr_streaming?t=1557492997473  0
+Request finished in 1102.8995ms 101 
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 420.948ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 632.0895ms
+Request finished in 718.6635ms 200 application/json; charset=utf-8
+Starting create-react-app server on port 58652...
+Request starting HTTP/1.1 DEBUG http://localhost:54528/  0
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Request finished in 63.7405ms 200 
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 28386.0297ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 285.6085ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 26.9588ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557513472330  
+Request finished in 30.8495ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/455/gcnfllve/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 34.9012ms 304 
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/455/p0uuj0op/xhr_streaming?t=1557513473403  0
+Request finished in 1763.338ms 101 
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 56917.549ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 57245.7545ms
+Request finished in 57347.4128ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Starting create-react-app server on port 58809...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Request starting HTTP/1.1 DEBUG http://localhost:54528/  0
+Request finished in 43.3501ms 200 
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 26069.0457ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 289.5819ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 18.3458ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557513630240  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 87.611ms 200 application/json; charset=UTF-8
+Request finished in 43.6617ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/047/jlmri5gp/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Executed action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 45511.5686ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.UserDTO, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Request finished in 47672.6251ms 101 
+Executed action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) in 46088.333ms
+Request finished in 46218.9834ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Starting create-react-app server on port 59028...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Request starting HTTP/1.1 DEBUG http://localhost:54528/  0
+Request finished in 52.6787ms 200 
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+Request starting HTTP/1.1 POST http://localhost:54528/api/event/getByDate application/x-www-form-urlencoded 18
+Route matched with {action = "GetByDate", controller = "Event", page = ""}. Executing action DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web) with arguments (5/10/2019) - Validation state: Valid
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executed action method DailyPlanner.Web.Controllers.EventController.GetByDate (DailyPlanner.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 967.5727ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DailyPlanner.DomainClasses.Models.Event, DailyPlanner.DomainClasses, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Starting create-react-app server on port 59124...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Failed to determine the https port for redirect.
+Starting create-react-app server on port 59152...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Request starting HTTP/1.1 DEBUG http://localhost:54528/  0
+Request finished in 53.0021ms 200 
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 28844.7438ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 807.5742ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request finished in 82.2579ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557513966005  
+Request finished in 26.8274ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/664/lpbqxqi3/websocket  
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request finished in 45.3581ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/664/e3hv5urf/xhr_streaming?t=1557513967378  0
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/664/hvkf1qdv/eventsource  
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/iframe.html  
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/664/bhvvdbwe/htmlfile?c=_jp.al14pll  
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/iframe.html  
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/664/g2js2x5s/xhr?t=1557513974841  0
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/iframe.html  
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/664/urij0y5r/jsonp?c=_jp.aq0pusd  
+Request finished in 5763.3937ms 200 text/html; charset=UTF-8
+Request finished in 3629.8086ms 200 text/html; charset=UTF-8
+Request finished in 7680.2041ms 200 application/javascript; charset=UTF-8
+Request finished in 3725.9779ms 200 application/javascript; charset=UTF-8
+Request finished in 1930.2893ms 200 text/html; charset=UTF-8
+Request finished in 1578.0447ms 200 application/javascript; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/664/urij0y5r/jsonp?c=_jp.aq0pusd  
+Request finished in 13763.5938ms 101 
+Request finished in 150.5988ms 200 application/javascript; charset=UTF-8
+Request finished in 5002.6183ms 200 text/html; charset=UTF-8
+Request finished in 7451.381ms 200 text/event-stream
+Starting create-react-app server on port 59594...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Request starting HTTP/1.1 DEBUG http://localhost:54528/  0
+Request finished in 183.8415ms 200 
+Failed to determine the https port for redirect.
+Starting create-react-app server on port 59632...
+Request starting HTTP/1.1 GET http://localhost:54528/  
+Request starting HTTP/1.1 DEBUG http://localhost:54528/  0
+Request finished in 52.3426ms 200 
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+Request starting HTTP/1.1 GET http://localhost:54528/api/user/getAllUsers  
+Route matched with {action = "GetAllUsers", controller = "User", page = ""}. Executing action DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web)
+Executing action method DailyPlanner.Web.Controllers.UserController.GetAllUsers (DailyPlanner.Web) - Validation state: Valid
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+Request finished in 45710.0868ms 200 text/html; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/static/js/bundle.js  
+Request finished in 1110.196ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/static/media/glyphicons-halflings-regular.448c34a5.woff2  
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/info?t=1557514395871  
+Request finished in 147.0158ms 304 
+Request finished in 93.3321ms 200 application/json; charset=UTF-8
+Request starting HTTP/1.1 GET http://localhost:54528/manifest.json  
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/477/dzojvi3o/websocket  
+Request starting HTTP/1.1 POST http://localhost:54528/sockjs-node/477/nmre2nud/xhr_streaming?t=1557514397922  0
+Request finished in 22.5015ms 304 
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/477/3jfh0tug/eventsource  
+Starting create-react-app server on port 59702...
+Request starting HTTP/1.1 GET http://localhost:54528/sockjs-node/iframe.html  
+Failed to determine the https port for redirect.
+> DailyPlanner.Web@0.1.0 start C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp
+> rimraf ./build && react-scripts start
+
+Starting the development server...
+
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+Request finished in 9096.9251ms 200 text/html; charset=UTF-8
+
+Compiled with warnings.
+
+
+./src/components/EventList.js
+
+  Line 3:  'Router' is defined but never used  no-unused-vars
+  Line 3:  'Route' is defined but never used   no-unused-vars
+
+./src/components/EditEvent.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/EditUser.js
+  Line 58:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+  Line 61:  Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+
+./src/components/UserList.js
+  Line 91:  Expected to return a value at the end of arrow function  array-callback-return
+
+./node_modules/object-assign/index.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react\cjs\react.development.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\object-assign\index.js
+    Used by 1 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\react-scripts\config\polyfills.js
+
+./node_modules/webpack/buildin/global.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 4 module(s), i. e.
+    C:\Users\Daniela\Source\Repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\lodash.isfunction\index.js
+* C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\webpack\buildin\global.js
+    Used by 23 module(s), i. e.
+    C:\Users\Daniela\source\repos\DailyPlanner\DailyPlanner.Web\ClientApp\node_modules\node-libs-browser\node_modules\punycode\punycode.js
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+
